@@ -7,7 +7,8 @@
             {"text": "Aumentas la velocidad/calidad de la visualización en función de la distancia al tener mayor número de fragmentos", "correct": false},
             {"text": "Aumentas la calidad al utilizar texturas mas grandes con un filtrado bilinear anisotropico", "correct": false}
         ],
-        "help": "El mipmapping es la precarga de diferentes tamaños/versiones de una textura para que, a mayor distancia, no se renderice con tanto detalle"
+        "help": "El mipmapping es la precarga de diferentes tamaños/versiones de una textura para que, a mayor distancia, no se renderice con tanto detalle",
+        "type": 1
     },
     {
         "question": "Como se puede introducir la atenuacion de un foco en función de la distancia en el modelo de iluminación de Phong?",
@@ -17,7 +18,8 @@
             {"text": "En la version 1.2 no se puede, en la 3.3 lo hacemos en el fragment shader", "correct": false},
             {"text": "Mediante el GL_SPOT_EXPONENT o pasando la distancia al fragment shader", "correct": true}
         ],
-        "help": "GL_SPOT_EXPONENT indica que la intensidad de la luz varie en función de la distancia al foco (como un cono, no en perpendicular)"
+        "help": "GL_SPOT_EXPONENT indica que la intensidad de la luz varie en función de la distancia al foco (como un cono, no en perpendicular)",
+        "type": 1
     },
     {
         "question": "La interpolación de los colores en una cara en el modelo de sombreado de Gouraud, Se realiza",
@@ -27,7 +29,8 @@
             {"text": "Se interpola a través de la columna de rasterizado", "correct": false},
             {"text": "Primero se interpola a partir de los colores los vértices y después interpolado a través la línea de rasterizado", "correct": true}
         ],
-        "help": "A partir de los colores de los vértices, se calculan sus rasterizados y, a continuación, se va por cada línea del raster para el resto de la cara"
+        "help": "A partir de los colores de los vértices, se calculan sus rasterizados y, a continuación, se va por cada línea del raster para el resto de la cara",
+        "type": 1
     },
     {
         "question": "El calculo de la matriz de vista, glLookat(...)",
@@ -37,7 +40,8 @@
             {"text": "Debo hacerlo con glMatrixMode(GL_PROJECTION) activo", "correct": true},
             {"text": "Debo hacerlo con glMatrixMode(GL_MODELVIEW) activo", "correct": false}
         ],
-        "help": "La vista depende de la proyección para activarse"
+        "help": "La vista depende de la proyección para activarse",
+        "type": 1
     },
     {
         "question": "Mediante el light mapping",
@@ -47,7 +51,8 @@
             {"text": "Se crea una textura con el brillo/luces de una superficie para posteriormente aplicar a objetos en movimiento simplificando el proceso de iluminación dinámica", "correct": false},
             {"text": "Creo una textura con los valores de las normales de una superficie y así puedo generar los efectos lumínicos", "correct": false}
         ],
-        "help": "El light mapping un mapa de iluminación sobre un objeto"
+        "help": "El light mapping un mapa de iluminación sobre un objeto",
+        "type": 1
     },
     {
         "question": "En general ¿cuantos fragmentos son generados en una escena?",
@@ -57,7 +62,8 @@
             {"text": "Uno por pixel", "correct": false},
             {"text": "Se puede calcular mediante la resolucion de la ventana por la profundidad del color por la profundidad del z-buffer", "correct": true}
         ],
-        "help": "Un fragmento es la información necesaria para dibujar un pixel"
+        "help": "Un fragmento es la información necesaria para dibujar un pixel",
+        "type": 1
     },
     {
         "question": "En el modelo de iluminacion de Phong el cálculo de las sombras entre los objetos se realiza",
@@ -67,7 +73,8 @@
             {"text": "Se calcula mediante la interpolacion bilineal de los colores de los vertices", "correct": false},
             {"text": "Se calcula mediante la interpolacion bilineal de las normales y a partir de ahí los colores en el rasterizado", "correct": false}
         ],
-        "help": "Iluminación de Phong los objetos no tapan la luz entre sí, es iluminación local, sin \"eclipses\" (Phong=Especular, Lamber=Sombreado=Difusa)"
+        "help": "Iluminación de Phong los objetos no tapan la luz entre sí, es iluminación local, sin \"eclipses\" (Phong=Especular, Lamber=Sombreado=Difusa)",
+        "type": 1
     },
     {
         "question": "La matriz de vista",
@@ -77,7 +84,8 @@
             {"text": "La determina el glOrtho(...) y el gluPerspective(...)", "correct": false},
             {"text": "Se calcula a partir del glLookat(...)", "correct": true}
         ],
-        "help": "Por descarte, en las prácticas glm::mat4 view = glLookAt"
+        "help": "Por descarte, en las prácticas glm::mat4 view = glLookAt",
+        "type": 1
     },
     {
         "question": "Quiero aplicar el modelo de sombreado de FLAT y varias caras comparten vertices indexados en tablas o VAOs",
@@ -87,7 +95,8 @@
             {"text": "Las caras se verian diferentes debido a la luz difusa y especular", "correct": false},
             {"text": "Al tener las mismas normales las caras se verian igual", "correct": true}
         ],
-        "help": "El sombreado FLAT depende de las normales para ver como se ilumina"
+        "help": "El sombreado FLAT depende de las normales para ver como se ilumina",
+        "type": 1
     },
     {
         "question": "Quiero hacer el Google Earth, ¿qué harías para aumentar la performance?",
@@ -97,8 +106,8 @@
             {"text": "No usar luces y usar light mapping para crear efectos de luz sin necesidad de generarlas", "correct": false},
             {"text": "Usar mip mapping, ya que al generar niveles de detalle se verá mejor e irá más rápido", "correct": true}
         ],
-        "help": "Gracias al mipmapping, se reduciría el consumo en el renderizado de las texturas, ya que para objetos pequeños o lejanos tendría menor nivel de detalle"
-    },
+        "help": "Gracias al mipmapping, se reduciría el consumo en el renderizado de las texturas, ya que para objetos pequeños o lejanos tendría menor nivel de detalle",
+        "type": 1    },
     {
         "question": "Quiero aplicar el modelo de sombreado de Phong",
         "answers": [
@@ -107,7 +116,8 @@
             {"text": "No puedo aplicarlo ni en la 1.2 ni en la 3.3", "correct": false},
             {"text": "En la 1.2 viene implementado por defecto y en la 3.3 debo implementarlo yo.", "correct": false}
         ],
-        "help": "En las prácticas, no se hacía iluminación en 1.2 pero en 3.3 se hacía en el fragment"
+        "help": "En las prácticas, no se hacía iluminación en 1.2 pero en 3.3 se hacía en el fragment",
+        "type": 1
     },
     {
         "question": "glRotate3f(), glTranslate3f() afectan:",
@@ -117,7 +127,8 @@
             {"text": "A la matriz de proyección.", "correct": false},
             {"text": "A la matriz del modelo, pero no a la matriz de proyección.", "correct": false}
         ],
-        "help": "Modifican el modelo (la proyección no se toca ya que no se modifican las coordenadas), el objeto"
+        "help": "Modifican el modelo (la proyección no se toca ya que no se modifican las coordenadas), el objeto",
+        "type": 1
     },
     {
         "question": "Las luces direccionales se diferencian respecto a las locales",
@@ -127,7 +138,8 @@
             {"text": "Son iguales, solo que tienen un ángulo de diferente apertura (45 y 180 grados respectivamente)", "correct": false},
             {"text": "En la cuarta componente de la dirección", "correct": true}
         ],
-        "help": "Una luz direccional es una que no tiene atenuación (cuarto parámetro), por lo que no tiene \"foco\" al no atenuarse nunca"
+        "help": "Una luz direccional es una que no tiene atenuación (cuarto parámetro), por lo que no tiene \"foco\" al no atenuarse nunca",
+        "type": 1
     },
     {
         "question": "Si descartamos un fragmento",
@@ -137,7 +149,8 @@
             {"text": "El pixel que representaría aparece del color del fondo si no existe otro fragmento con valor de z-buffer mayor", "correct": true},
             {"text": "Aparece del color con el que borramos el buffer de color", "correct": false}
         ],
-        "help": "Al descartar fragmentos, convierte en \"invisibles\" esos fragmentos, haciendolos del color del fondo o los objetos que haya detrás"
+        "help": "Al descartar fragmentos, convierte en \"invisibles\" esos fragmentos, haciendolos del color del fondo o los objetos que haya detrás",
+        "type": 1
     },
     {
         "question": "En el vertex shader, para calcular la posición de un punto en el Clip Space, la expresión es",
@@ -147,7 +160,8 @@
             {"text": "gl_Position = view * model * projection * vec4(aPos, 1.0);", "correct": false},
             {"text": "gl_Position = view * projection * model * vec4(aPos, 1.0);", "correct": false}
         ],
-        "help": "El orden es projection view model"
+        "help": "El orden es projection view model",
+        "type": 1
     },
     {
         "question": "El fragment shader se aplica",
@@ -157,7 +171,8 @@
             {"text": "Después del ensamblado y antes del coloreado", "correct": true},
             {"text": "Después del coloreado y después del clipping", "correct": false}
         ],
-        "help": "Es de lo último en realizarse, el fragment tiene información de los colores por lo que se hace inmediatamente antes"
+        "help": "Es de lo último en realizarse, el fragment tiene información de los colores por lo que se hace inmediatamente antes",
+        "type": 1
     },
     {
         "question": "El parámetro/macro GL_TEXTURE_WRAP permite",
@@ -167,7 +182,8 @@
             {"text": "Evitar artefactos en el mapeado de texturas cuando estas no cubren por completo una cara", "correct": false},
             {"text": "Determinar cómo las coordenadas de textura deben aplicarse sobre un objeto evitando artefactos", "correct": true}
         ],
-        "help": "??????????"
+        "help": "??????????",
+        "type": 1
     },
     {
         "question": "En un terminal vectorial",
@@ -177,7 +193,8 @@
             {"text": "El haz de electrones recorre la pantalla siguiendo las instrucciones de la unidad de control realizando así el dibujo", "correct": true},
             {"text": "Los píxeles se ordenan en filas y columnas conformando una matriz de dibujo", "correct": false}
         ],
-        "help": "Recorren de manera aleatoria toda la pantalla pero sólo para dibujar el dibujo"
+        "help": "Recorren de manera aleatoria toda la pantalla pero sólo para dibujar el dibujo",
+        "type": 1
     },
     {
         "question": "glMatrixMode(GL_MODELVIEW)",
@@ -187,7 +204,8 @@
             {"text": "Transformamos el sistema de coordenadas del Local Space al World Space", "correct": true},
             {"text": "Transformamos el sistema de coordenadas del World Space al Local Space", "correct": false}
         ],
-        "help": "Transforma los objetos 'locales' al sistema de coordenadas para renderizar"
+        "help": "Transforma los objetos 'locales' al sistema de coordenadas para renderizar",
+        "type": 1
     },
     {
         "question": "En el fragment shader puedo",
@@ -197,7 +215,8 @@
             {"text": "Calculo la posición de los vértices y a partir de esta, el color de los fragmentos", "correct": false},
             {"text": "Solo puedo determinar el color de los fragmentos", "correct": true}
         ],
-        "help": "El fragment no aplica transformaciones ni nada, sólo como se renderiza (las luces son colores)"
+        "help": "El fragment no aplica transformaciones ni nada, sólo como se renderiza (las luces son colores)",
+        "type": 1
     },
     {
         "question": "La última coordenada de w en las coordenadas homogéneas",
@@ -207,7 +226,8 @@
             {"text": "Debe ser 1", "correct": true},
             {"text": "Debe ser 0", "correct": false}
         ],
-        "help": "La coordenada w es siempre 1"
+        "help": "La coordenada w es siempre 1",
+        "type": 1
     },
     {
         "question": "El modelo de iluminación de Phong es lento",
@@ -217,7 +237,8 @@
             {"text": "Por el cálculo de las sombras entre los objetos", "correct": false},
             {"text": "Por el cálculo de los rayos reflejados y transmitidos", "correct": false}
         ],
-        "help": "Ya que hay que calcular la iluminación para todos los objetos, no hay sombras ni interacciones"
+        "help": "Ya que hay que calcular la iluminación para todos los objetos, no hay sombras ni interacciones",
+        "type": 1
     },
     {
         "question": "Puedo utilizar el mismo vertex shader en dos program shaders",
@@ -227,7 +248,8 @@
             {"text": "No", "correct": false},
             {"text": "Si", "correct": true}
         ],
-        "help": "Sí, pero sin cambiar las variables de entrada en los fragments"
+        "help": "Sí, pero sin cambiar las variables de entrada en los fragments",
+        "type": 1
     },
     {
         "question": "El Local Space",
@@ -237,7 +259,8 @@
             {"text": "Es el sistema de coordenadas utilizado en el vertex shader para las transformaciones", "correct": false},
             {"text": "Es el sistema de coordenadas al cual están referidos los vértices de los objetos cuando se diseña", "correct": true}
         ],
-        "help": "Es la posición de los objetos a la hora de diseñar la escena, en el local solo se compone el objeto y en el view se compone la escena"
+        "help": "Es la posición de los objetos a la hora de diseñar la escena, en el local solo se compone el objeto y en el view se compone la escena",
+        "type": 1
     },
     {
         "question": "En una proyección en perspectiva",
@@ -247,7 +270,8 @@
             {"text": "Los objetos no cambian su tamaño en función de la distancia al no existir un centro de proyección", "correct": false},
             {"text": "Los objetos cambian su tamaño en función de la distancia al existir un centro de proyección", "correct": true}
         ],
-        "help": "La perspectiva es la simulación del ojo humano, y funciona como un cono"
+        "help": "La perspectiva es la simulación del ojo humano, y funciona como un cono",
+        "type": 1
     },
     {
         "question": "En un terminal raster",
@@ -257,7 +281,8 @@
             {"text": "El haz de electrones recorre ordenadamente la pantalla formada por filas y columnas realizando así el dibujo", "correct": true},
             {"text": "El haz de electrones recorre la pantalla siguiendo las instrucciones de la unidad de control realizado así el dibujo", "correct": false}
         ],
-        "help": "Similar al vectorial, pero no es aleatorio, sino que recorre toda la pantalla y 'pone los bits a 1'"
+        "help": "Similar al vectorial, pero no es aleatorio, sino que recorre toda la pantalla y 'pone los bits a 1'",
+        "type": 1
     },
     {
         "question": "Las transformaciones geométricas suponen un cambio en el sistema de coordenadas",
@@ -267,7 +292,8 @@
             {"text": "Falso, ya que solo se hacen translaciones, rotaciones y escalados", "correct": true},
             {"text": "Verdadero transformamos el sistema de coordenadas Word Space al Local Space", "correct": false}
         ],
-        "help": "Las transformaciones geométricas suponen cambios en los objetos, no en el sistema de coordenadas"
+        "help": "Las transformaciones geométricas suponen cambios en los objetos, no en el sistema de coordenadas",
+        "type": 1
     },
     {
         "question": "Si se produce z-fighting qué puedo hacer",
@@ -278,7 +304,8 @@
             {"text": "Determinan la posición de la cámara", "correct": false},
             {"text": "Aumentar la resolucion del z-buffer", "correct": true}
         ],
-        "help": "Aumentar la precisión z-buffer (no es siempre posible), Elegir bien near y far, separar un poco los objetos"
+        "help": "Aumentar la precisión z-buffer (no es siempre posible), Elegir bien near y far, separar un poco los objetos",
+        "type": 1
     },
     {
         "question": "Dónde se aplica el modelo de iluminación",
@@ -288,7 +315,8 @@
             {"text": "Cuando se aplica el z-buffer y el Alpha test", "correct": false},
             {"text": "Antes de la rasterización", "correct": false}
         ],
-        "help": "Tras el raster, junto el colorear"
+        "help": "Tras el raster, junto el colorear",
+        "type": 1
     },
     {
         "question": "Por defecto, la cámara se sitúa, mira y orienta en",
@@ -298,7 +326,8 @@
             {"text": "(0,0,0), (0,0,-1), (0,1,0)", "correct": true},
             {"text": "(0,0,0), (0,0,1), (0,1,0)", "correct": false}
         ],
-        "help": "Es la cámara por defecto"
+        "help": "Es la cámara por defecto",
+        "type": 1
     },
     {
         "question": "Las tablas geométricas",
@@ -308,7 +337,8 @@
             {"text": "Incorporan la información sobre los vértices, normales, coordenadas de textura, materiales", "correct": false},
             {"text": "Incorporan toda la información necesaria para formar las caras de las superficies abiertas", "correct": false}
         ],
-        "help": "Tablas de atributos informan sobre las propiedades físicas de los polígonos, color transparencia"
+        "help": "Tablas de atributos informan sobre las propiedades físicas de los polígonos, color transparencia",
+        "type": 1
     },
     {
         "question": "En el fragment shader, para calcular el modelo de iluminación de Phong",
@@ -317,7 +347,8 @@
             {"text": "Utilizo la luz incidente, la posición del usuario y la cámara", "correct": false},
             {"text": "Utilizo la información del fragmento, la luz reflejada, la posición del usuario y la cámara", "correct": false}
         ],
-        "help": "Temario, se usan las normales (que depende da la cara incidente)"
+        "help": "Temario, se usan las normales (que depende da la cara incidente)",
+        "type": 1
     },
     {
         "question": "El Vertex Array Object VAO",
@@ -327,7 +358,8 @@
             {"text": "Es un objeto de OpenGL que indica cómo la información de los vértices debe ser procesada", "correct": false},
             {"text": "Permite la utilización de vértices, complementando funciones tales como, glVertex3f(...), glNormal3f(...) glTexture(...)", "correct": false}
         ],
-        "help": "Definición de VAO, es la información para los vértices"
+        "help": "Definición de VAO, es la información para los vértices",
+        "type": 1
     },
     {
         "question": "Realizo una serie de transformaciones geométricas a un objeto. A partir de la matriz final",
@@ -337,7 +369,8 @@
             {"text": "Puedo calcular la posición del objeto, orientación y su escalado", "correct": false},
             {"text": "Puedo calcular la posición del objeto", "correct": true}
         ],
-        "help": "Solo se sabe la posición del objeto, ya que no se sabe como se ha rotado ese objeto ni escalado"
+        "help": "Solo se sabe la posición del objeto, ya que no se sabe como se ha rotado ese objeto ni escalado",
+        "type": 1
     },
     {
         "question": "GL_TEXTURE_MAG_FILTER, GL_TEXTURE_MIN_FILTER permite",
@@ -347,7 +380,8 @@
             {"text": "Permiten ver las texturas con más calidad cuando estas ocupan más o menos espacio por pixel que el pixel que representan", "correct": true},
             {"text": "Permiten ver las texturas con más calidad en función de la distancia", "correct": false}
         ],
-        "help": "Temario, definición de las constantes, es adaptar el tamaño de la textura al pixel"
+        "help": "Temario, definición de las constantes, es adaptar el tamaño de la textura al pixel",
+        "type": 1
     },
     {
         "question": "En un shader una variable uniforme",
@@ -357,7 +391,8 @@
             {"text": "Se utiliza para comunicar el programa principal con el vertex shader, pero no con el fragment shader", "correct": false},
             {"text": "Se utiliza para comunicar el program shader con el programa principal", "correct": true}
         ],
-        "help": "De prácticas, las variables uniformes comunican el shader con el programa, glUniform y glGetUniform"
+        "help": "De prácticas, las variables uniformes comunican el shader con el programa, glUniform y glGetUniform",
+        "type": 1
     },
     {
         "question": "Si tenemos una figura definida en un Vertex Array Object cuyos vértices no están indexados, Los dibujo mediante",
@@ -367,7 +402,8 @@
             {"text": "glDrawElements(...);", "correct": false},
             {"text": "glDrawArrays(...);", "correct": true}
         ],
-        "help": "glDrawElements sería para dibujar elementos indexados"
+        "help": "glDrawElements sería para dibujar elementos indexados",
+        "type": 1
     },
     {
         "question": "En la pipe gráfica, ¿cuándo se realiza un ensamblado de primitivas?",
@@ -377,7 +413,8 @@
             {"text": "Después de la rasterización", "correct": false},
             {"text": "Después de aplicar el z-buffer", "correct": false}
         ],
-        "help": "Tras aplicar las transformaciones del vertex, se pueden ensamblar las primitivas"
+        "help": "Tras aplicar las transformaciones del vertex, se pueden ensamblar las primitivas",
+        "type": 1
     },
     {
         "question": "El color de un fragmento",
@@ -387,7 +424,8 @@
             {"text": "Depende del programador", "correct": false},
             {"text": "Se determina mediante la suma del color del objeto y el de la luz", "correct": false}
         ],
-        "help": "Tiene lugar interpolando los vértices (que definen los colores) y la iluminación"
+        "help": "Tiene lugar interpolando los vértices (que definen los colores) y la iluminación",
+        "type": 1
     },
     {
         "question": "El World Space",
@@ -397,7 +435,8 @@
             {"text": "Es el sistema de coordenadas al cual están referidos los vértices de los objetos cuando se diseñan", "correct": false},
             {"text": "Es un sistema de coordenadas ortogonal o en perspectiva dependiendo de la cámara", "correct": false}
         ],
-        "help": "Temario, es el sistema que se usa para renderizar la escena"
+        "help": "Temario, es el sistema que se usa para renderizar la escena",
+        "type": 1
     },
     {
         "question": "glOrtho(...) y gluPerspective(...)",
@@ -407,7 +446,8 @@
             {"text": "Determinan la posición de la cámara", "correct": false},
             {"text": "Determinan la matriz de vista y la de proyección", "correct": false}
         ],
-        "help": "Es la que determina la proyección (la vista viene de glLookAt)"
+        "help": "Es la que determina la proyección (la vista viene de glLookAt)",
+        "type": 1
     },
     {
         "question": "En una proyección ortográfica",
@@ -417,7 +457,8 @@
             {"text": "Los objetos no cambian su tamaño porque el frustrum es cuadrado", "correct": false},
             {"text": "Los objetos sí cambian su tamaño al existir un centro de proyección", "correct": false}
         ],
-        "help": "No hay perspectiva, no importa la distancia con respecto a la cámara (lo paralelo es paralela, no es un cono), el frustrum es un cubo"
+        "help": "No hay perspectiva, no importa la distancia con respecto a la cámara (lo paralelo es paralela, no es un cono), el frustrum es un cubo",
+        "type": 1
     },
     {
         "question": "¿En el vertex shader, puedo cambiar el color y las normales de los vértices de los objetos?",
@@ -427,7 +468,8 @@
             {"text": "Colores sí, normales no", "correct": false},
             {"text": "Colores no, normales sí", "correct": true}
         ],
-        "help": "Los colores no (en el fragment)"
+        "help": "Los colores no (en el fragment)",
+        "type": 1
     },
     {
         "question": "El Clip Space es",
@@ -437,7 +479,8 @@
             {"text": "La región del espacio vista desde la cámara", "correct": false},
             {"text": "El espacio que se recorta para hacerlo coincidir con la ventana", "correct": false}
         ],
-        "help": "Temario, es el espacio de dentro del frustrum"
+        "help": "Temario, es el espacio de dentro del frustrum",
+        "type": 1
     },
     {
         "question": "Cuando vamos a dibujar los objetos con el z-buffer desactivado, y ordeno los objetos de atrás a delante",
@@ -447,7 +490,8 @@
             {"text": "Si además los transparentes van al final de todo, no deberían producirse artefactos", "correct": false},
             {"text": "Se pueden producir artefactos, aunque ordene los objetos", "correct": false}
         ],
-        "help": "Los artefactos se producirían si colisionasen en profundidad, pero al estar ordenados (y z-buffer desactivado) el renderizador ya sabe quien está antes"
+        "help": "Los artefactos se producirían si colisionasen en profundidad, pero al estar ordenados (y z-buffer desactivado) el renderizador ya sabe quien está antes",
+        "type": 1
     },
     {
         "question": "En la versión 3.3. quiero hacer un objeto transparente, habilito el alpha test y:",
@@ -457,7 +501,8 @@
             {"text": "Verifico que las texturas sean gift, tiff, PPM, o TGA", "correct": false},
             {"text": "El fragment shader permite gestionar la transparencia como el programador crea oportuno", "correct": false}
         ],
-        "help": "Se comprueba si se tiene el canal alfa (transparencia)"
+        "help": "Se comprueba si se tiene el canal alfa (transparencia)",
+        "type": 1
     },
     {
         "question": "Cuando vamos a dibujar los objetos teniendo en cuenta z-buffer",
@@ -467,7 +512,8 @@
             {"text": "La efectividad no se ve afectada por el orden de los objetos, ya que el z-buffer lo resuelve", "correct": false},
             {"text": "Es más efectivo si dibujamos primero los objetos cercanos y luego los lejanos", "correct": true}
         ],
-        "help": "El z-buffer se va incrementando cuanto más lejos están, por lo que para evitar números negativos o muy grandes, se debe empezar con el más cercano"
+        "help": "El z-buffer se va incrementando cuanto más lejos están, por lo que para evitar números negativos o muy grandes, se debe empezar con el más cercano",
+        "type": 1
     },
     {
         "question": "La matriz de proyección",
@@ -477,7 +523,349 @@
             {"text": "Realiza la transformación de una escena para determinar el punto de vista del usuario", "correct": false},
             {"text": "Realiza la transformación desde el World Space al View Space", "correct": false}
         ],
-        "help": "La proyección transforma de la escena 'local' a la global, que se encuentra en el clipping space"
+        "help": "La proyección transforma de la escena 'local' a la global, que se encuentra en el clipping space",
+        "type": 1
+    },
+    {
+        "question": "El Z-buffer",
+        "answers": [
+            {"text": "Sustituye al algoritmo del pintor por ser más rápido y eficiente", "correct": false},
+            {"text": "Asigna un valor de profundidad a cada fragmento y lo utiliza para determinar si debe ser dibujado o no", "correct": true},
+            {"text": "Asigna un valor de profundidad que complemente al algoritmo del pintor", "correct": false},
+            {"text": "Al pintar los objetos de adleante a atrás evita los problemas que plantea el algoritmo del pintor", "correct": false}
+        ],
+        "help": "Sustituye al pintor, pero no tiene que ser más eficiente que el pintor",
+        "type": 3
+    },
+    {
+        "question": "Una lista de visualización",
+        "answers": [
+            {"text": "Sirve para calcular los vértices de un objeto proceduralmente", "correct": false},
+            {"text": "Incrementa la performance del sistema", "correct": true},
+            {"text": "Le asignemos un nombre y así podemos identificador el objeto que referencia", "correct": false},
+            {"text": "La creamos cada vez que nos hace falta dibujar un objeto y después la eliminamos", "correct": false}
+        ],
+        "help": "Mejora el rendimiento al precargar los datos necesarios para dibujar los objetos",
+        "type": 3
+    },
+    {
+        "question": "El double buffer",
+        "answers": [
+            {"text": "Evita el parpadeu durante la generación de la imagen", "correct": true},
+            {"text": "Debemos desactivarlo pues por defecto se encuentra activado y ralentiza el procesamiento", "correct": false},
+            {"text": "Ocupa mucho tamaño por lo que debe evitarse", "correct": false},
+            {"text": "Aumenta la velocidad de procesamiento de las imágenes", "correct": false}
+        ],
+        "help": "Permite tener ya precargado el siguiente frame, evitando el delay de cargar uno nuevo",
+        "type": 3
+    },
+    {
+        "question": "Si mi pantalla tiene una resolución VGA y color real, cuanto ocupa el frame buffer en megabytes, y si la resolución de la pantall es 1280*1024?",
+        "answers": [
+            {"text": "Depende del dispositivo", "correct": false},
+            {"text": "9216M y 3.9M", "correct": true},
+            {"text": "2.13M y 4.2M", "correct": false},
+            {"text": "3.124K y 4.12K", "correct": false}
+        ],
+        "help": "resoluciónVGA = 640 * 480 = 307.200 pixeles | resolucion2 = 1280 * 1024 = 1.310.720 pixeles | colorReal = 24 bits / pixel | se multiplica, se obtienen en bits y se pasa a bytes",
+        "type": 3
+    },
+    {
+        "question": "Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco, 25fps durante 100f, 50fps durante 100f, 10fps durante 100f, 25fps durante 100f, cual es la tasa media?",
+        "answers": [
+            {"text": "100fs", "correct": false},
+            {"text": "10fs", "correct": false},
+            {"text": "50fs", "correct": false},
+            {"text": "20fs", "correct": true}
+        ],
+        "help": "25fps 100f = 4s | 50fps 100f = 2s | 10fps 100f = 10s | 25fps 100f = 4s | 4+2+10+4=20s 100+100+100+100=400f | 400/20=20fps",
+        "type": 3
+    },
+    {
+        "question": "Donde fue instalado el primer prototipo de Pong",
+        "answers": [
+            {"text": "En el labotario de Atari-USA", "correct": true},
+            {"text": "En el MIT", "correct": false},
+            {"text": "En los laboratorios BELL", "correct": false},
+            {"text": "En un bar", "correct": false}
+        ],
+        "help": "Historia",
+        "type": 3
+    },
+    {
+        "question": "El vertex array object, VAO",
+        "answers": [
+            {"text": "Representa un objeto y todas sus propeidades (color, normales, texturas) mediante un array", "correct": true},
+            {"text": "Es el array donde se representan todos los objetos ya que solo puede ser uno", "correct": false},
+            {"text": "Representa todos los objetos y sus propiedades de superficie, es único en cada programa", "correct": false},
+            {"text": "Representa un objeto mediante sus vértices", "correct": false}
+        ],
+        "help": "Es lo que compone el VAO",
+        "type": 3
+    },
+    {
+        "question": "La indexación de vértices",
+        "answers": [
+            {"text": "El fragment shader reciebe los fragmentos y utiliza el índice para procesarlos", "correct": false},
+            {"text": "Se usaba mucho pero el vertex shader la eliminó", "correct": false},
+            {"text": "No es muy utilizada ya que complica la programación", "correct": false},
+            {"text": "Evita los vértices repetidos", "correct": true}
+        ],
+        "help": "La indexación de vértices consiste en definir los vértices, y luego un array más indicando en que orden los quieres utilizar",
+        "type": 3
+    },
+    {
+        "question": "Una lista de visualización",
+        "answers": [
+            {"text": "Sirve para calcular los vértices de un objeto proceduralmente", "correct": false},
+            {"text": "Incrementa la performance del sistema", "correct": true},
+            {"text": "Le asignemos un nombre y así podemos identificador el objeto al que referencia", "correct": false},
+            {"text": "La creamos cada vez que nos hace falta dibujar un objeto y después la eliminamos", "correct": false}
+        ],
+        "help": "Ahorra tiempo y recursos, evitando tener que definir por duplicado los vértices",
+        "type": 3
+    },
+    {
+        "question": "Para representar objetos se utiliza principalmente triángulos ya que",
+        "answers": [
+            {"text": "Es la forma más simple de determinar/definir un plano", "correct": true},
+            {"text": "Los triángulos ya no se utilizan, se utilizan cuadrados que son más rápidos y cubren más espacio", "correct": false},
+            {"text": "El proceso de teselación así lo undica", "correct": false},
+            {"text": "Tiene una normal y los cuadrados no", "correct": false}
+        ],
+        "help": "Con tres puntos se define un plano sin ningún tipo de riesgo",
+        "type": 3
+    },
+    {
+        "question": "El vertex shader",
+        "answers": [
+            {"text": "Realiza operaciones sobre el VAO y coloca los vértices en el world-space", "correct": true},
+            {"text": "Verifica que los vértices estén ordenados", "correct": false},
+            {"text": "Verifica que el VAO tenga todas las propiedades necesarias para que sean representados", "correct": false},
+            {"text": "Su salida es el color de cada fragmento", "correct": false}
+        ],
+        "help": "Coloca los objetos de las coordenadas locales en la escena final",
+        "type": 3
+    },
+    {
+        "question": "El color y otras propiedades de los vértices de un objeto se los enviamos al fragment shader",
+        "answers": [
+            {"text": "Es necesario enviarlo desde el vertex shader", "correct": true},
+            {"text": "Directamente desde nuestro programa y así lo controlamos mejor", "correct": false},
+            {"text": "No utiliza esas propiedades ya que realiza z-test y el alpha-test", "correct": false},
+            {"text": "Recibe los vértices y los coloca en su posición", "correct": false}
+        ],
+        "help": "El vertex le pasa información al fragment, entre otras cosas el color sin modificar (ya que no puede)",
+        "type": 3
+    },
+    {
+        "question": "En OpenGL, la normal en un triángulo",
+        "answers": [
+            {"text": "Solo sirve para hacer el cullface", "correct": false},
+            {"text": "Se puede determianr por triángulo o por vértice", "correct": true},
+            {"text": "Se calcula automáticamente", "correct": false},
+            {"text": "Es difícil de calcular y solo se usa en el proceso de iluminación", "correct": false}
+        ],
+        "help": "Las normales son por triángulo, pero se pueden calcular la de los vértices",
+        "type": 3
+    },
+    {
+        "question": "El local space",
+        "answers": [
+            {"text": "Los objetos se colocan en el a partir del world-space con matriz de transformación", "correct": false},
+            {"text": "Se usa en el vertex shader para mover los objetos", "correct": false},
+            {"text": "Es el sistema coordenado donde están referenciados los vértices en el objeto", "correct": true},
+            {"text": "Es el sistema coordenado de la escena con todos los objetos", "correct": false}
+        ],
+        "help": "En el local space se establecen los vértices y las coordenadas para luego ser pasadas al world",
+        "type": 3
+    },
+    {
+        "question": "El world space",
+        "answers": [
+            {"text": "Se usa solo en la versión 1.2, en la 3.3 se usa el local space", "correct": false},
+            {"text": "Se usa en el vertex shader para mover los objetos", "correct": false},
+            {"text": "Es el sistema coordenado de los vértices de cada objeto", "correct": false},
+            {"text": "Es el sistema coordenado donde están referenciados los objetos de una escena", "correct": true}
+        ],
+        "help": "El world space es donde se encuentra la escena, con sus coordenadas ya renderizadas",
+        "type": 3
+    },
+    {
+        "question": "En una herencia articulada",
+        "answers": [
+            {"text": "Los objetos herdean las posiciones de sus objetos padres", "correct": true},
+            {"text": "OpenGL permite realizarlo automáticamente", "correct": false},
+            {"text": "No es posible hacer este tipo de herencia en OpenGL", "correct": false},
+            {"text": "Los objetos se unen mediante joins", "correct": false}
+        ],
+        "help": "En la herencia articulada se parte de la matriz de transformación de un objeto, uno tras otro, recursivamente",
+        "type": 3
+    },
+    {
+        "question": "En general, en la versión OpenGL 3.3",
+        "answers": [
+            {"text": "Las transformaciones se realizan en el vertex shader", "correct": true},
+            {"text": "Las transformaciones se realizan como en la versión 1.2", "correct": false},
+            {"text": "Las transformaciones se realizan en el geometry shader", "correct": false},
+            {"text": "Las transformaciones se realizan en el fragment shader", "correct": false}
+        ],
+        "help": "Se pasa la matriz de transformación al vertex, y se aplica ahí",
+        "type": 3
+    },
+    {
+        "question": "Las coordenadas homogéneas",
+        "answers": [
+            {"text": "Permiten escalar los objetos fuera del origen", "correct": false},
+            {"text": "Permiten normalizar las traslaciones, rotaciones y escalados", "correct": false},
+            {"text": "Permiten describir la traslación de objetos mediante una multiplicación", "correct": true},
+            {"text": "Se usan para minar bitcoins", "correct": false},
+            {"text": "Los giros se realizan respecto a cualquier punto del espacio", "correct": false}
+        ],
+        "help": "Aplican un factor de conversión, indicando a que eje aplicar la transformación",
+        "type": 3
+    },
+    {
+        "question": "Las transformaciones traslación, rotación, escalado..., las puedo realizar sin orden",
+        "answers": [
+            {"text": "No porque no tiene la propiedad conmutativa", "correct": true},
+            {"text": "No porque aunque tiene la propiedad conmutativa, los ejes de eurler no lo permiten", "correct": false},
+            {"text": "Si porque se acumulan en la pila", "correct": false},
+            {"text": "En la versión 1.2, en la 3.3 no", "correct": false}
+        ],
+        "help": "La multiplicación de matrices no es conmutativa",
+        "type": 3
+    },
+    {
+        "question": "En una proyección ortográfica",
+        "answers": [
+            {"text": "Los objetos más alejados se muestran detrás de los más cercanos", "correct": false},
+            {"text": "Los objetos s even más pequeños cuanto más lejos estén", "correct": false},
+            {"text": "La distancia al objeto no determina su tamaño", "correct": true},
+            {"text": "Los objetos son todos del mismo tamaño", "correct": false}
+        ],
+        "help": "En ortográfica el frustrum es un cubo, por lo que es paralelo se mantiene paralelo y sin cambiar de tamaño por muy lejos que esté",
+        "type": 3
+    },
+    {
+        "question": "Que es el view space",
+        "answers": [
+            {"text": "Es el resultado de realizar la proyección de la escena", "correct": false},
+            {"text": "Es el resultado de multiplicar las coordenadas del punto por la matriz de transformación", "correct": false},
+            {"text": "Es el resultado de multiplicar la matriz del modelo por la de transformación", "correct": false},
+            {"text": "Es el resultado de transformar las coordenadas de la escena world-space en las usuario/cámara", "correct": true}
+        ],
+        "help": "El view space es el espacio de visión, por lo que es lo que hay con respecto al usuario",
+        "type": 3
+    },
+    {
+        "question": "El proceso de cliping / clipping",
+        "answers": [
+            {"text": "Es el recorte del área de la escena que es visible", "correct": true},
+            {"text": "Es el proceso de multiplicar la matriz de proyección por la de modelo", "correct": false},
+            {"text": "Se realiza en el fragment shader", "correct": false},
+            {"text": "Es el proceso de colorear cada fragmento", "correct": false}
+        ],
+        "help": "Consiste en eliminar de la escena todo lo que se sale fuera de la visión y lo que está oculto",
+        "type": 3
+    },
+    {
+        "question": "El frustrum",
+        "answers": [
+            {"text": "Es el resultado de la multiplicación de la matriz de visión por la del modelo", "correct": false},
+            {"text": "Es la región tridimensional de una escena que es visible en pantalla", "correct": true},
+            {"text": "Es el resultado de la multiplicación la matriz de visión por la posición de los vértices", "correct": false},
+            {"text": "Es el resultado del cálculo de la matriz de proyección ortográfica pro la del modelo", "correct": false}
+        ],
+        "help": "El frustrum es toda la región de la escena que entra en el campo de visión en la pantalla",
+        "type": 3
+    },
+    {
+        "question": "El cálculo de la matriz de proyección se suele hacer en",
+        "answers": [
+            {"text": "Mediante una variable uniforme", "correct": false},
+            {"text": "En el fragment shader", "correct": false},
+            {"text": "En el vertex shader", "correct": true},
+            {"text": "En el geometry shader", "correct": false}
+        ],
+        "help": "El vertex shader se encarga de realizar todas las operaciones con respecto a las coordenadas",
+        "type": 3
+    },
+    {
+        "question": "El FOV o field of view",
+        "answers": [
+            {"text": "Es la relación entre el near y el far", "correct": false},
+            {"text": "Es el ángulo de visión de la cámara sintética", "correct": true},
+            {"text": "Admite unicamente los valores 45, 60", "correct": false},
+            {"text": "Es la relación ancho/alto de la cámara sintética", "correct": false}
+        ],
+        "help": "El fovy es el ángulo de apertura de la cámara",
+        "type": 3
+    },
+    {
+        "question": "En la pipe fija el modelo el color de un punto de una cara",
+        "answers": [
+            {"text": "Se realiza mediante la interpolación de los colores de los vértices", "correct": true},
+            {"text": "Se calcula mediante un modelo de iluminación global", "correct": false},
+            {"text": "Se calcula como la suma de los colores RGB", "correct": false},
+            {"text": "No se calcula, lo determina el usuario", "correct": false}
+        ],
+        "help": "Se realiza un degradado interpolando los colores de los vértices",
+        "type": 3
+    },
+    {
+        "question": "El color de un vértice se calcula",
+        "answers": [
+            {"text": "Como resultado de la multiplicación de la luz ambiente por la componente ambiente del material", "correct": false},
+            {"text": "Como resultado de la multiplicación de la luz difusa por la componente ambiente de la difusa", "correct": false},
+            {"text": "Como resultado de la multiplicación de la luz especular por la componente ambiente de la especular", "correct": false},
+            {"text": "Como resultado de la multiplicación de la luz ambiente por la componente ambiente del material mas la multiplicación de la luz difusa por la componente ambiente de la difusa más la multiplicación de la luz especular por la componente ambiente de la especular", "correct": true}
+        ],
+        "help": "En el color se tienen en cuenta todas las luces, no solo",
+        "type": 3
+    },
+    {
+        "question": "En un sistema de iluminación local",
+        "answers": [
+            {"text": "Los objetos solo se iluminan con las luces locales", "correct": false},
+            {"text": "Los objetos no crean sombras entre sí", "correct": true},
+            {"text": "Los objetos usan el modelo de iluminación simplificado", "correct": false},
+            {"text": "Los objetos crean sombras entre sí", "correct": false}
+        ],
+        "help": "En iluminación local (Phong, especular), no se tienen en cuenta la interferencia de otros objetos",
+        "type": 3
+    },
+    {
+        "question": "La luz difusa",
+        "answers": [
+            {"text": "Su intensidad depende de la posición del foco", "correct": true},
+            {"text": "Su intensidad depende de la posición del foco y del usuario", "correct": false},
+            {"text": "Es una luz que no genera sombras, es constante en todo el objeto", "correct": false},
+            {"text": "Hace que parezca que el objeto emita luz", "correct": false}
+        ],
+        "help": "Sólo depende del foco, no del usuario",
+        "type": 3
+    },
+    {
+        "question": "La luz ambiental",
+        "answers": [
+            {"text": "Hace que parezca que el objeto emita luz", "correct": false},
+            {"text": "Su intensidad depende de la posición del foco", "correct": false},
+            {"text": "Su intensidad depende de la posición del foco y del usuario", "correct": false},
+            {"text": "Es la luz que no genera sombras, es constante en todo el objeto", "correct": true}
+        ],
+        "help": "Es la iluminación genérica, sin foco, que hay en toda la escena y por todos los lados",
+        "type": 3
+    },
+    {
+        "question": "En el sombreado de Gouraud",
+        "answers": [
+            {"text": "El color se calcula por la interpolación de las normales a través de la línea de rasterizado", "correct": false},
+            {"text": "El color se calcula por la interpolación de los colores de los vértices", "correct": false},
+            {"text": "El color se calcula por la interpolación lineal de los colores a través de la línea de rasterizado", "correct": true}
+        ],
+        "help": "Las sombras van a través de las lineas de rasterizado, igual que los colores",
+        "type": 3
     },
     {
         "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 10 fps durante 50 frames, 25fps durante 50 frames, 50fps durante 50 frames, 25fps durante 50 frames ¿Cual es la tasa media de refresco en frames por segundo?",
@@ -486,7 +874,8 @@
             {"text": "10fps", "correct": false},
             {"text": "25fps", "correct": false},
             {"text": "20fps", "correct": true}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 20 fps durante 100frames, 50fps durante 100frames, 20fps durante 100frames, 10fps durante 100frames ¿Cual es la tasa media de refresco en frames por segundo?",
@@ -495,7 +884,8 @@
             {"text": "32.2fps", "correct": false},
             {"text": "20.1fps", "correct": false},
             {"text": "18.1fps", "correct": true}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (4, 1)] se transforme en el segmento [(2, 1) (2, 5)]",
@@ -504,7 +894,8 @@
             {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": true},
             {"text": "glTranslatef(2,-1,0) glScalef(2,1,0) glRotatef(0,0,1) glTranslatef(2,-1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(0,0,0) dibujo_segmento()", "correct": false}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (2, 5)] se transforme en el segmento [(2, 1) (4, 1)]",
@@ -513,7 +904,8 @@
             {"text": "glTranslatef(2,1,0) glRotatef(-90,0,0,1) glScalef(0.5,1,0) glTranslatef (-2,-1,0)dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(0,0,0) glScalef(1,-0.5,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(0,0,0) glScalef(-0.5,1,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 1) (0 0 0) (-1 1 0) (-1 0 0)",
@@ -522,7 +914,8 @@
             {"text": "Veo dos triangulos de igual tamaño", "correct": true},
             {"text": "Al segundo triangulo le falta un trozo, el primero se ve bien", "correct": false},
             {"text": "Veo dos triangulos de diferente tamaño", "correct": false}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 1) (1 1 0) (0 0 -1) (0 0 1) (1 1 1) (0 1 1)",
@@ -531,7 +924,8 @@
             {"text": "Veo dos triangulos cruzados", "correct": false},
             {"text": "Veo un cuadrado", "correct": false},
             {"text": "Veo un triangulo", "correct": true}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 0) (0 0 0) (-1 1 0) (-1 0 0)",
@@ -540,7 +934,8 @@
             {"text": "No, ninguno", "correct": false},
             {"text": "No el primero, Si el segudno", "correct": false},
             {"text": "Si, los dos", "correct": true}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 1024*760 y una velocidad de refresco de 30fps",
@@ -549,7 +944,8 @@
             {"text": "0.000015s", "correct": false},
             {"text": "0.000032s", "correct": true},
             {"text": "0.000025s", "correct": false}
-        ]
+        ],
+        "type": 2
     },
     {
         "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 640*480 y una velocidad de refresco de 30fps",
@@ -559,6 +955,7 @@
             {"text": "0.000032s", "correct": false},
             {"text": "0.000025s", "correct": false},
             {"text": "Ninguna -> 1/30fps/640píxeles de fila = 0.000052s", "correct": true}
-        ]
+        ],
+        "type": 2
     }
 ]

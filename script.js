@@ -88,29 +88,47 @@ const renderQuestionAccordion = (question) => {
     return item;
 };
 
+function getTypesDisplay() {
+    const cb1 = document.getElementById("cb1");
+    const cb2 = document.getElementById("cb2");
+    const cb3 = document.getElementById("cb3");
+
+    if (!cb1.checked && !cb2.checked && !cb3.checked) {
+        return [true, true, true];
+    }
+
+    return [cb1.checked, cb2.checked, cb3.checked];
+}
+
 function renderCard() {
     const container = document.getElementById("container");
     container.innerHTML = "";
 
+    const types = getTypesDisplay();
+
     QUESTIONS.forEach(question => {
-        const row = document.createElement("div");
-        row.classList.add("row");
-        row.classList.add("py-2");
+        if (types[question.type - 1]) {
+            const row = document.createElement("div");
+            row.classList.add("row");
+            row.classList.add("py-2");
 
-        const col = document.createElement("div");
-        col.classList.add("col-md");
+            const col = document.createElement("div");
+            col.classList.add("col-md");
 
-        const card = renderQuestionCard(question);
-        col.appendChild(card);
-        row.appendChild(col);
+            const card = renderQuestionCard(question);
+            col.appendChild(card);
+            row.appendChild(col);
 
-        container.appendChild(row);
+            container.appendChild(row);
+        }
     });
 };
 
 function renderAccordion(txtValue) {
     const container = document.getElementById("container");
     container.innerHTML = "";
+
+    const types = getTypesDisplay();
 
     const row = document.createElement("div");
     row.classList.add("row");
@@ -123,15 +141,17 @@ function renderAccordion(txtValue) {
     accordion.classList.add("accordion");
 
     QUESTIONS.forEach(question => {
-        let match = false;
-        match = match || standarize(question.question).includes(txtValue);
-        question.answers.forEach(answer => {
-            match = match || standarize(answer.text).includes(txtValue);
-        });
-
-        if (match) {
-            const accordionItem = renderQuestionAccordion(question);
-            accordion.appendChild(accordionItem);
+        if (types[question.type - 1]) {
+            let match = false;
+            match = match || standarize(question.question).includes(txtValue);
+            question.answers.forEach(answer => {
+                match = match || standarize(answer.text).includes(txtValue);
+            });
+    
+            if (match) {
+                const accordionItem = renderQuestionAccordion(question);
+                accordion.appendChild(accordionItem);
+            }
         }
     });
 
@@ -145,7 +165,6 @@ function renderAccordion(txtValue) {
 function update() {
     const txtSearch = document.getElementById("txtSearch");
     const txtValue = standarize(txtSearch.value);
-    console.log(txtValue);
 
     if (txtValue.length === 0) renderCard();
     else renderAccordion(txtValue);
@@ -161,4 +180,7 @@ function getQuestions() {
 }
 
 document.getElementById("txtSearch").addEventListener("input", update);
+document.getElementById("cb1").addEventListener("change", update);
+document.getElementById("cb2").addEventListener("change", update);
+document.getElementById("cb3").addEventListener("change", update);
 getQuestions();
