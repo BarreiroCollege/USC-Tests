@@ -952,6 +952,7 @@
             {"text": "0.000032s", "correct": true},
             {"text": "0.000025s", "correct": false}
         ],
+        "help": "1/30 = tiempo en renderizar un frame | (1/30)/1024 = tiempo en renderizar una columna",
         "type": 2
     },
     {
@@ -963,6 +964,7 @@
             {"text": "0.000025s", "correct": false},
             {"text": "Ninguna -> 1/30fps/640píxeles de fila = 0.000052s", "correct": true}
         ],
+        "help": "1/30 = tiempo en renderizar un frame | (1/30)/1024 = tiempo en renderizar una columna",
         "type": 2
     }
 ]
