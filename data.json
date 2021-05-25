@@ -1,0 +1,29 @@
+[
+    {
+        "question": "Mediante el mipmapping",
+        "answers": [
+            {"text": "Aumentas la velocidad/calidad de la visualización en función de la distancia al tener un menor número de fragmentos", "correct": true},
+            {"text": "Aumentas la velocidad/calidad de la visualización en función de la distancia", "correct": false},
+            {"text": "Aumentas la velocidad/calidad de la visualización en función de la distancia al tener mayor número de fragmentos", "correct": false},
+            {"text": "Aumentas la calidad al utilizar texturas mas grandes con un filtrado bilinear anisotropico", "correct": false}
+        ]
+    },
+    {
+        "question": "Como se puede introducir la atenuacion de un foco en función de la distancia en el modelo de iluminación de Phong?",
+        "answers": [
+            {"text": "Mediante los parámetros de una cuadrática y su multiplicación por los valores de la luz", "correct": false},
+            {"text": "Mediante el CUT_OFF o pasando el valor de la distacia al fragment shader", "correct": false},
+            {"text": "En la version 1.2 no se puede, en la 3.3 lo hacemos en el fragment shader", "correct": false},
+            {"text": "Mediante el GL_SPOT_EXPONENT o pasando la distancia al fragment shader", "correct": true}
+        ]
+    },
+    {
+        "question": "La interpolación de los colores en una cara en el modelo de sombreado de Gouraud, Se realiza",
+        "answers": [
+            {"text": "Se interpola a partur del color de los vertices", "correct": false},
+            {"text": "Primero se interpola las normales de los vértices y después se interpolan a través la línea de rasterizado", "correct": false},
+            {"text": "Se interpola a través de la columna de rasterizado", "correct": false},
+            {"text": "Primero se interpola a partir de los colores los vértices y después interpolado a través la línea de rasterizado", "correct": true}
+        ]
+    }
+]
