@@ -30,6 +30,7 @@ const renderAnswers = (answers) => {
 const renderQuestionCard = (question) => {
     const card = document.createElement("div");
     card.classList.add("card");
+    card.classList.add("hover-shadow");
     card.classList.add("w-100");
     if (question.help !== undefined && question.help !== null && question.help.length > 0) {
         card.title = question.help;
