@@ -25,5 +25,77 @@
             {"text": "Se interpola a través de la columna de rasterizado", "correct": false},
             {"text": "Primero se interpola a partir de los colores los vértices y después interpolado a través la línea de rasterizado", "correct": true}
         ]
+    },
+    {
+        "question": "El calculo de la matriz de vista, glLookat(...)",
+        "answers": [
+            {"text": "Puedo hacerlo en cualquier lugar", "correct": false},
+            {"text": "Puedo hacerlo en cualquier lugar pero después debo hacer glMatrizMode(GL_PROJECTION)", "correct": false},
+            {"text": "Debo hacerlo con glMatrixMode(GL_PROJECTION) activo", "correct": true},
+            {"text": "Debo hacerlo con glMatrixMode(GL_MODELVIEW) activo", "correct": false}
+        ]
+    },
+    {
+        "question": "Mediante el light mapping",
+        "answers": [
+            {"text": "Se crea una textura con el brillo/luces de una superficie para posteriormente aplicarla entre los objetos generando efectos lumínicos", "correct": true},
+            {"text": "Utilizo una textura con las componentes ambiente, difusa y especular de cada punto y así aplicar el modelo de Phong", "correct": false},
+            {"text": "Se crea una textura con el brillo/luces de una superficie para posteriormente aplicar a objetos en movimiento simplificando el proceso de iluminación dinámica", "correct": false},
+            {"text": "Creo una textura con los valores de las normales de una superficie y así puedo generar los efectos lumínicos", "correct": false}
+        ]
+    },
+    {
+        "question": "En general ¿cuantos fragmentos son generados en una escena?",
+        "answers": [
+            {"text": "Mas que pixeles", "correct": false},
+            {"text": "Uno o dos por pixel, dependiendo si tengo el Double Buffer activado o no", "correct": false},
+            {"text": "Uno por pixel", "correct": false},
+            {"text": "Se puede calcular mediante la resolucion de la ventana por la profundidad del color por la profundidad del z-buffer", "correct": true}
+        ]
+    },
+    {
+        "question": "En el modelo de iluminacion de Phong el cálculo de las sombras entre los objetos se realiza",
+        "answers": [
+            {"text": "Si es tipo FLAT mediante la normal por cara mediante Gouraid interpolando los colores de los vertices", "correct": false},
+            {"text": "El modelo de iluminacion de Phong no contempla sombreado entre objetos", "correct": true},
+            {"text": "Se calcula mediante la interpolacion bilineal de los colores de los vertices", "correct": false},
+            {"text": "Se calcula mediante la interpolacion bilineal de las normales y a partir de ahí los colores en el rasterizado", "correct": false}
+        ]
+    },
+    {
+        "question": "La matriz de vista",
+        "answers": [
+            {"text": "Por defecto es la matriz identidad", "correct": false},
+            {"text": "La determina la multiplicacion de la matriz del modelo por la de proyeccion", "correct": false},
+            {"text": "La determina el glOrtho(...) y el gluPerspective(...)", "correct": false},
+            {"text": "Se calcula a partir del glLookat(...)", "correct": true}
+        ]
+    },
+    {
+        "question": "Quiero aplicar el modelo de sombreado de FLAT y varias caras comparten vertices indexados en tablas o VAOs",
+        "answers": [
+            {"text": "Si pero tengo que tener una tabla de materiales", "correct": false},
+            {"text": "Las caras se verian diferentes debido a la luz ambiente", "correct": false},
+            {"text": "Las caras se verian diferentes debido a la luz difusa y especular", "correct": false},
+            {"text": "Al tener las mismas normales las caras se verian igual", "correct": true}
+        ]
+    },
+    {
+        "question": "Quiero hacer el Google Earth, ¿qué harías para aumentar la performance?",
+        "answers": [
+            {"text": "Usar bump mapping, ya que al considerar las normales de cada fragmento y no por cara se verá mejor e irá más rápido", "correct": false},
+            {"text": "Usar environment mapping, ya que está diseñada específicamente para entornos naturales", "correct": false},
+            {"text": "No usar luces y usar light mapping para crear efectos de luz sin necesidad de generarlas", "correct": false},
+            {"text": "Usar mip mapping, ya que al generar niveles de detalle se verá mejor e irá más rápido", "correct": true}
+        ]
+    },
+    {
+        "question": "Quiero aplicar el modelo de sombreado de Phong",
+        "answers": [
+            {"text": "Funciona en ambas versiones, pero debo habilitar las luces y el modelo de sombreado", "correct": false},
+            {"text": "En la 1.2 no puedo aplicarlo, pero en la 3.3 debo implementarlo yo", "correct": true},
+            {"text": "No puedo aplicarlo ni en la 1.2 ni en la 3.3", "correct": false},
+            {"text": "En la 1.2 viene implementado por defecto y en la 3.3 debo implementarlo yo.", "correct": false}
+        ]
     }
 ]
