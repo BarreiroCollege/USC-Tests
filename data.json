@@ -868,77 +868,84 @@
         "type": 3
     },
     {
-        "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 10 fps durante 50 frames, 25fps durante 50 frames, 50fps durante 50 frames, 25fps durante 50 frames ¿Cual es la tasa media de refresco en frames por segundo?",
+        "question": "Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 10 fps durante 50 frames, 25fps durante 50 frames, 50fps durante 50 frames, 25fps durante 50 frames ¿Cual es la tasa media de refresco en frames por segundo?",
         "answers": [
             {"text": "15fps", "correct": false},
             {"text": "10fps", "correct": false},
             {"text": "25fps", "correct": false},
             {"text": "20fps", "correct": true}
         ],
+        "help": "Calcular el tiempo en pantalla, sumarlo, calcular los frames totales, sumarlos, y dividir frames entre tiempo (media geométrica/aritmética)",
         "type": 2
     },
     {
-        "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 20 fps durante 100frames, 50fps durante 100frames, 20fps durante 100frames, 10fps durante 100frames ¿Cual es la tasa media de refresco en frames por segundo?",
+        "question": "Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 20 fps durante 100frames, 50fps durante 100frames, 20fps durante 100frames, 10fps durante 100frames ¿Cual es la tasa media de refresco en frames por segundo?",
         "answers": [
             {"text": "26.2fps", "correct": false},
             {"text": "32.2fps", "correct": false},
             {"text": "20.1fps", "correct": false},
             {"text": "18.1fps", "correct": true}
         ],
+        "help": "Calcular el tiempo en pantalla, sumarlo, calcular los frames totales, sumarlos, y dividir frames entre tiempo (media geométrica/aritmética)",
         "type": 2
     },
     {
-        "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (4, 1)] se transforme en el segmento [(2, 1) (2, 5)]",
+        "question": "Que secuencia de transformaciones producen que el fragmento [(2, 1) (4, 1)] se transforme en el segmento [(2, 1) (2, 5)]",
         "answers": [
-            {"text": "glTranslatef(0,0,0) glRotatef(0,0,1) glScalef(2,1,0) glTranslatef (2,1,0)dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(0,0,0) glRotatef(0,0,1) glScalef(2,1,0) glTranslatef(2,1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": true},
             {"text": "glTranslatef(2,-1,0) glScalef(2,1,0) glRotatef(0,0,1) glTranslatef(2,-1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(0,0,0) dibujo_segmento()", "correct": false}
         ],
+        "help": "La pila es al revés, se hace de derecha a izquierda. Por descarte, se sabe que solo es la B ya que las otras matrices el glTrasltate no vuelve nunca a la posición original",
         "type": 2
     },
     {
-        "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (2, 5)] se transforme en el segmento [(2, 1) (4, 1)]",
+        "question": "Que secuencia de transformaciones producen que el fragmento [(2, 1) (2, 5)] se transforme en el segmento [(2, 1) (4, 1)]",
         "answers": [
             {"text": "glTranslatef(2,1,0) glScalef(0.5,1,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": true},
-            {"text": "glTranslatef(2,1,0) glRotatef(-90,0,0,1) glScalef(0.5,1,0) glTranslatef (-2,-1,0)dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(2,1,0) glRotatef(-90,0,0,1) glScalef(0.5,1,0) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(0,0,0) glScalef(1,-0.5,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false},
             {"text": "glTranslatef(0,0,0) glScalef(-0.5,1,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false}
         ],
+        "help": "La pila es al revés, se hace de derecha a izquierda. Por descarte, se sabe que solo es la B ya que las otras matrices el glTrasltate no vuelve nunca a la posición original",
         "type": 2
     },
     {
-        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 1) (0 0 0) (-1 1 0) (-1 0 0)",
+        "question": "Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 1) (0 0 0) (-1 1 0) (-1 0 0)",
         "answers": [
             {"text": "Al primer triangulo le falta un trozo, el segundo se ve bien", "correct": false},
             {"text": "Veo dos triangulos de igual tamaño", "correct": true},
             {"text": "Al segundo triangulo le falta un trozo, el primero se ve bien", "correct": false},
             {"text": "Veo dos triangulos de diferente tamaño", "correct": false}
         ],
+        "help": "Se aplica la regla de la mano derecha para saber si el pulgar mira hacia el usuario",
         "type": 2
     },
     {
-        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 1) (1 1 0) (0 0 -1) (0 0 1) (1 1 1) (0 1 1)",
+        "question": "Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 1) (1 1 0) (0 0 -1) (0 0 1) (1 1 1) (0 1 1)",
         "answers": [
             {"text": "Se ve el primero, el segundo se corta", "correct": false},
             {"text": "Veo dos triangulos cruzados", "correct": false},
             {"text": "Veo un cuadrado", "correct": false},
             {"text": "Veo un triangulo", "correct": true}
         ],
+        "help": "Se aplica la regla de la mano derecha para saber si el pulgar mira hacia el usuario",
         "type": 2
     },
     {
-        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 0) (0 0 0) (-1 1 0) (-1 0 0)",
+        "question": "Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 0) (0 0 0) (-1 1 0) (-1 0 0)",
         "answers": [
             {"text": "Si el primero, No el segundo", "correct": false},
             {"text": "No, ninguno", "correct": false},
             {"text": "No el primero, Si el segudno", "correct": false},
             {"text": "Si, los dos", "correct": true}
         ],
+        "help": "Se aplica la regla de la mano derecha para saber si el pulgar mira hacia el usuario",
         "type": 2
     },
     {
-        "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 1024*760 y una velocidad de refresco de 30fps",
+        "question": "Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 1024*760 y una velocidad de refresco de 30fps",
         "answers": [
             {"text": "0.000012s", "correct": false},
             {"text": "0.000015s", "correct": false},
@@ -948,7 +955,7 @@
         "type": 2
     },
     {
-        "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 640*480 y una velocidad de refresco de 30fps",
+        "question": "Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 640*480 y una velocidad de refresco de 30fps",
         "answers": [
             {"text": "0.000012s", "correct": false},
             {"text": "0.000015s", "correct": false},
