@@ -31,6 +31,9 @@ const renderQuestionCard = (question) => {
     const card = document.createElement("div");
     card.classList.add("card");
     card.classList.add("w-100");
+    if (question.help !== undefined && question.help !== null && question.help.length > 0) {
+        card.title = question.help;
+    }
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -53,6 +56,9 @@ const renderQuestionAccordion = (question) => {
 
     const item = document.createElement("div");
     item.classList.add("accordion-item");
+    if (question.help !== undefined && question.help !== null && question.help.length > 0) {
+        item.title = question.help;
+    }
 
     const header = document.createElement("h2");
     header.classList.add("accordion-header");
