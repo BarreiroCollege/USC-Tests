@@ -1,5 +1,6 @@
 'use strict';
 
+const TYPES = ["Test", "Ejercicios", "Examen"];
 const QUESTIONS = [];
 
 function standarize(txt) {
@@ -73,6 +74,14 @@ const renderQuestionAccordion = (question) => {
     button.setAttribute("data-mdb-target", "#question" + id);
     button.setAttribute("data-mdb-target", "#question" + id);
     button.innerText = question.question;
+
+    const badge = document.createElement("span");
+    badge.classList.add("badge");
+    badge.classList.add("bg-primary");
+    badge.style.marginRight = "6px";
+    badge.innerText = TYPES[question.type - 1];
+    button.prepend(badge);
+
     header.appendChild(button);
 
     const collapse = document.createElement("div");
