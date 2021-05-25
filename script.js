@@ -60,6 +60,7 @@ const renderQuestionAccordion = (question) => {
     const button = document.createElement("button");
     button.classList.add("accordion-button");
     button.classList.add("collapsed");
+    button.style.fontWeight = "bold";
     button.type = "button";
     button.setAttribute("data-mdb-toggle", "collapse");
     button.setAttribute("data-mdb-target", "#question" + id);
