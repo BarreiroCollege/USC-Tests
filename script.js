@@ -138,7 +138,7 @@ function renderAccordion(txtValue) {
 
 function update() {
     const txtSearch = document.getElementById("txtSearch");
-    const txtValue = txtSearch.value.toLowerCase();
+    const txtValue = standarize(txtSearch.value);
     console.log(txtValue);
 
     if (txtValue.length === 0) renderCard();

@@ -97,5 +97,420 @@
             {"text": "No puedo aplicarlo ni en la 1.2 ni en la 3.3", "correct": false},
             {"text": "En la 1.2 viene implementado por defecto y en la 3.3 debo implementarlo yo.", "correct": false}
         ]
+    },
+    {
+        "question": "glRotate3f(), glTranslate3f() afectan:",
+        "answers": [
+            {"text": "A la matriz del modelo y a la matriz de proyección.", "correct": false},
+            {"text": "A la matriz del modelo.", "correct": true},
+            {"text": "A la matriz de proyección.", "correct": false},
+            {"text": "A la matriz del modelo, pero no a la matriz de proyección.", "correct": false}
+        ]
+    },
+    {
+        "question": "Las luces direccionales se diferencian respecto a las locales",
+        "answers": [
+            {"text": "Son iguales, salvo la posición que, en las direccionales, es infinito", "correct": false},
+            {"text": "Las direccionales tienen posición y dirección, las locales solo posición", "correct": false},
+            {"text": "Son iguales, solo que tienen un ángulo de diferente apertura (45 y 180 grados respectivamente)", "correct": false},
+            {"text": "En la cuarta componente de la dirección", "correct": true}
+        ]
+    },
+    {
+        "question": "Si descartamos un fragmento",
+        "answers": [
+            {"text": "Aparece en negro", "correct": false},
+            {"text": "El pixel que representaría del color del fondo", "correct": false},
+            {"text": "El pixel que representaría aparece del color del fondo si no existe otro fragmento con valor de z-buffer mayor", "correct": true},
+            {"text": "Aparece del color con el que borramos el buffer de color", "correct": false}
+        ]
+    },
+    {
+        "question": "En el vertex shader, para calcular la posición de un punto en el Clip Space, la expresión es",
+        "answers": [
+            {"text": "gl_Position = model * view * projection * vec4(aPos, 1.0);", "correct": false},
+            {"text": "gl_Position = projection * view * model * vec4(aPos, 1.0);", "correct": true},
+            {"text": "gl_Position = view * model * projection * vec4(aPos, 1.0);", "correct": false},
+            {"text": "gl_Position = view * projection * model * vec4(aPos, 1.0);", "correct": false}
+        ]
+    },
+    {
+        "question": "El fragment shader se aplica",
+        "answers": [
+            {"text": "Después del coloreado y después del clipping", "correct": false},
+            {"text": "Antes del ensamblado y después del clipping", "correct": false},
+            {"text": "Después del ensamblado y antes del coloreado", "correct": true},
+            {"text": "Después del coloreado y después del clipping", "correct": false}
+        ]
+    },
+    {
+        "question": "El parámetro/macro GL_TEXTURE_WRAP permite",
+        "answers": [
+            {"text": "Determinar cómo las coordenadas de textura se unen a los vértices del objeto evitando artefactos", "correct": false},
+            {"text": "El filtrado de las texturas evitando artefactos", "correct": false},
+            {"text": "Evitar artefactos en el mapeado de texturas cuando estas no cubren por completo una cara", "correct": false},
+            {"text": "Determinar cómo las coordenadas de textura deben aplicarse sobre un objeto evitando artefactos", "correct": true}
+        ]
+    },
+    {
+        "question": "En un terminal vectorial",
+        "answers": [
+            {"text": "Los píxeles se ordenan en filas y columnas conformando una matriz de dibujo", "correct": false},
+            {"text": "Representa las imágenes mediante una fórmula matemática", "correct": false},
+            {"text": "El haz de electrones recorre la pantalla siguiendo las instrucciones de la unidad de control realizando así el dibujo", "correct": true},
+            {"text": "Los píxeles se ordenan en filas y columnas conformando una matriz de dibujo", "correct": false}
+        ]
+    },
+    {
+        "question": "glMatrixMode(GL_MODELVIEW)",
+        "answers": [
+            {"text": "Transformamos la cámara ortogonal a perspectiva", "correct": false},
+            {"text": "Transformamos las coordenadas de los vértices de un objeto al frustrum", "correct": false},
+            {"text": "Transformamos el sistema de coordenadas del Local Space al World Space", "correct": true},
+            {"text": "Transformamos el sistema de coordenadas del World Space al Local Space", "correct": false}
+        ]
+    },
+    {
+        "question": "En el fragment shader puedo",
+        "answers": [
+            {"text": "A partir de los vértices calcular la posición de los fragmentos y entonces determinar sus propiedades", "correct": false},
+            {"text": "Utilizar y modificar información de los fragmentos", "correct": false},
+            {"text": "Calculo la posición de los vértices y a partir de esta, el color de los fragmentos", "correct": false},
+            {"text": "Solo puedo determinar el color de los fragmentos", "correct": true}
+        ]
+    },
+    {
+        "question": "La última coordenada de w en las coordenadas homogéneas",
+        "answers": [
+            {"text": "Puede tomar cualquier valor, pero se debe normalizar por el far / near", "correct": false},
+            {"text": "Puede tomar cualquier valor, pero se debe homogeneizar", "correct": false},
+            {"text": "Debe ser 1", "correct": true},
+            {"text": "Debe ser 0", "correct": false}
+        ]
+    },
+    {
+        "question": "El modelo de iluminación de Phong es lento",
+        "answers": [
+            {"text": "Por el cálculo de las interacciones entre los objetos", "correct": false},
+            {"text": "Por el cálculo complejo a realizar, debido a la interpolación bilineal de las normales para el cálculo del color de los fragmentos", "correct": true},
+            {"text": "Por el cálculo de las sombras entre los objetos", "correct": false},
+            {"text": "Por el cálculo de los rayos reflejados y transmitidos", "correct": false}
+        ]
+    },
+    {
+        "question": "Puedo utilizar el mismo vertex shader en dos program shaders",
+        "answers": [
+            {"text": "Sí, pero debo cambiar el nombre de las variables in y out", "correct": false},
+            {"text": "Sí, pero debo cambiar el nombre de las variables uniformes", "correct": false},
+            {"text": "No", "correct": false},
+            {"text": "Si", "correct": true}
+        ]
+    },
+    {
+        "question": "El Local Space",
+        "answers": [
+            {"text": "Es el sistema de coordenadas utilizado para componer la escena", "correct": false},
+            {"text": "Es el sistema de coordenadas al cual están referidos todos los objetos", "correct": false},
+            {"text": "Es el sistema de coordenadas utilizado en el vertex shader para las transformaciones", "correct": false},
+            {"text": "Es el sistema de coordenadas al cual están referidos los vértices de los objetos cuando se diseña", "correct": true}
+        ]
+    },
+    {
+        "question": "En una proyección en perspectiva",
+        "answers": [
+            {"text": "Los objetos no cambian su tamaño en función de la distancia porque el frustum es cuadrado", "correct": false},
+            {"text": "Los objetos cambian su tamaño en función de la distancia porque el frustum es una pirámide cuadrangular", "correct": false},
+            {"text": "Los objetos no cambian su tamaño en función de la distancia al no existir un centro de proyección", "correct": false},
+            {"text": "Los objetos cambian su tamaño en función de la distancia al existir un centro de proyección", "correct": true}
+        ]
+    },
+    {
+        "question": "En un terminal raster",
+        "answers": [
+            {"text": "La imagen se escribe en el double buffer y luego se vuelca a la pantalla", "correct": false},
+            {"text": "Representa las imagenes mediante una formula matematica", "correct": false},
+            {"text": "El haz de electrones recorre ordenadamente la pantalla formada por filas y columnas realizando así el dibujo", "correct": true},
+            {"text": "El haz de electrones recorre la pantalla siguiendo las instrucciones de la unidad de control realizado así el dibujo", "correct": false}
+        ]
+    },
+    {
+        "question": "Las transformaciones geométricas suponen un cambio en el sistema de coordenadas",
+        "answers": [
+            {"text": "Verdadero transformamos el sistema de coordenadas Local Space al Word Space", "correct": false},
+            {"text": "Verdadero transformando el sistema de coordenadas al de la cámara", "correct": false},
+            {"text": "Falso, ya que solo se hacen translaciones, rotaciones y escalados", "correct": true},
+            {"text": "Verdadero transformamos el sistema de coordenadas Word Space al Local Space", "correct": false}
+        ]
+    },
+    {
+        "question": "Si se produce z-fighting qué puedo hacer",
+        "answers": [
+            {"text": "Cambiar el near y el far", "correct": false},
+            {"text": "Ordenar los objetos de delante hacia atrás", "correct": false},
+            {"text": "Ordenar los objetos de atrás hacia delante", "correct": false},
+            {"text": "Determinan la posición de la cámara", "correct": false},
+            {"text": "Aumentar la resolucion del z-buffer", "correct": true}
+        ]
+    },
+    {
+        "question": "Dónde se aplica el modelo de iluminación",
+        "answers": [
+            {"text": "Después de la rasterización", "correct": true},
+            {"text": "Al final de la pipe gráfica, una vez se determina el fragmento que se visualizará", "correct": false},
+            {"text": "Cuando se aplica el z-buffer y el Alpha test", "correct": false},
+            {"text": "Antes de la rasterización", "correct": false}
+        ]
+    },
+    {
+        "question": "Por defecto, la cámara se sitúa, mira y orienta en",
+        "answers": [
+            {"text": "(0,0,0), (0,1,0), (0,0,1)", "correct": false},
+            {"text": "(1,0,0), (0,0,0), (0,1,0)", "correct": false},
+            {"text": "(0,0,0), (0,0,-1), (0,1,0)", "correct": true},
+            {"text": "(0,0,0), (0,0,1), (0,1,0)", "correct": false}
+        ]
+    },
+    {
+        "question": "Las tablas geométricas",
+        "answers": [
+            {"text": "Incorporan la información sobre los materiales de cada cara", "correct": false},
+            {"text": "Incorporan la información sobre los vértices y los parámetros que proporcionan información sobre los polígonos o la superficie que determinan", "correct": true},
+            {"text": "Incorporan la información sobre los vértices, normales, coordenadas de textura, materiales", "correct": false},
+            {"text": "Incorporan toda la información necesaria para formar las caras de las superficies abiertas", "correct": false}
+        ]
+    },
+    {
+        "question": "En el fragment shader, para calcular el modelo de iluminación de Phong",
+        "answers": [
+            {"text": "Utilizo la normal de la cara, la luz incidente, la posición del usuario y la cámara", "correct": true},
+            {"text": "Utilizo la luz incidente, la posición del usuario y la cámara", "correct": false},
+            {"text": "Utilizo la información del fragmento, la luz reflejada, la posición del usuario y la cámara", "correct": false}
+        ]
+    },
+    {
+        "question": "El Vertex Array Object VAO",
+        "answers": [
+            {"text": "Es un objeto de OpenGL que almacena la información para enlazar los vértices en el vertex shader", "correct": false},
+            {"text": "Es un objeto de OpenGL que almacena toda la información necesaria para el procesado de los vértices de un objeto", "correct": true},
+            {"text": "Es un objeto de OpenGL que indica cómo la información de los vértices debe ser procesada", "correct": false},
+            {"text": "Permite la utilización de vértices, complementando funciones tales como, glVertex3f(...), glNormal3f(...) glTexture(...)", "correct": false}
+        ]
+    },
+    {
+        "question": "Realizo una serie de transformaciones geométricas a un objeto. A partir de la matriz final",
+        "answers": [
+            {"text": "Puedo calcular la posición del objeto y su orientación", "correct": false},
+            {"text": "No puedo determinar ni posición, ni orientación, ni escalado ya que están mezclados", "correct": false},
+            {"text": "Puedo calcular la posición del objeto, orientación y su escalado", "correct": false},
+            {"text": "Puedo calcular la posición del objeto", "correct": true}
+        ]
+    },
+    {
+        "question": "GL_TEXTURE_MAG_FILTER, GL_TEXTURE_MIN_FILTER permite",
+        "answers": [
+            {"text": "Permiten ver las texturas con más calidad cuando estas no cubren todo el objeto", "correct": false},
+            {"text": "Indica el tamaño mínimo y máximo que se pueden tener una textura, depende del hardware", "correct": false},
+            {"text": "Permiten ver las texturas con más calidad cuando estas ocupan más o menos espacio por pixel que el pixel que representan", "correct": true},
+            {"text": "Permiten ver las texturas con más calidad en función de la distancia", "correct": false}
+        ]
+    },
+    {
+        "question": "En un shader una variable uniforme",
+        "answers": [
+            {"text": "Se utiliza para comunicar el vertex shader con el fragment shader", "correct": false},
+            {"text": "Su valor es constante en el shader", "correct": false},
+            {"text": "Se utiliza para comunicar el programa principal con el vertex shader, pero no con el fragment shader", "correct": false},
+            {"text": "Se utiliza para comunicar el program shader con el programa principal", "correct": true}
+        ]
+    },
+    {
+        "question": "Si tenemos una figura definida en un Vertex Array Object cuyos vértices no están indexados, Los dibujo mediante",
+        "answers": [
+            {"text": "glVertex3f(...);", "correct": false},
+            {"text": "glCallList(...);", "correct": false},
+            {"text": "glDrawElements(...);", "correct": false},
+            {"text": "glDrawArrays(...);", "correct": true}
+        ]
+    },
+    {
+        "question": "En la pipe gráfica, ¿cuándo se realiza un ensamblado de primitivas?",
+        "answers": [
+            {"text": "Después de aplicar el vertex shader.", "correct": true},
+            {"text": "Después del fragment shader.c.Después de la rasterización", "correct": false},
+            {"text": "???", "correct": false},
+            {"text": "Después de aplicar el z-buffer", "correct": false}
+        ]
+    },
+    {
+        "question": "El color de un fragmento",
+        "answers": [
+            {"text": "Se determina en el shader dependiendo del color interpolado de los vértices y los procesos de iluminación", "correct": true},
+            {"text": "Depende del proceso de rasterización y la posterior iluminación del fragmento", "correct": false},
+            {"text": "Depende del programador", "correct": false},
+            {"text": "Se determina mediante la suma del color del objeto y el de la luz", "correct": false}
+        ]
+    },
+    {
+        "question": "El World Space",
+        "answers": [
+            {"text": "Es el sistema de coordenadas en el que se incluyen las coordenadas homogéneas", "correct": false},
+            {"text": "Es el sistema de coordenadas utilizado para componer la escena", "correct": true},
+            {"text": "Es el sistema de coordenadas al cual están referidos los vértices de los objetos cuando se diseñan", "correct": false},
+            {"text": "Es un sistema de coordenadas ortogonal o en perspectiva dependiendo de la cámara", "correct": false}
+        ]
+    },
+    {
+        "question": "glOrtho(...) y gluPerspective(...)",
+        "answers": [
+            {"text": "Determinan la matriz de vista", "correct": false},
+            {"text": "Determinan la matriz de proyección", "correct": true},
+            {"text": "Determinan la posición de la cámara", "correct": false},
+            {"text": "Determinan la matriz de vista y la de proyección", "correct": false}
+        ]
+    },
+    {
+        "question": "En una proyección ortográfica",
+        "answers": [
+            {"text": "Los objetos no cambian su tamaño al ser los proyectores paralelos", "correct": true},
+            {"text": "Los objetos no cambian su tamaño si no habilitas el z-buffer", "correct": false},
+            {"text": "Los objetos no cambian su tamaño porque el frustrum es cuadrado", "correct": false},
+            {"text": "Los objetos sí cambian su tamaño al existir un centro de proyección", "correct": false}
+        ]
+    },
+    {
+        "question": "¿En el vertex shader, puedo cambiar el color y las normales de los vértices de los objetos?",
+        "answers": [
+            {"text": "Sí", "correct": false},
+            {"text": "No", "correct": false},
+            {"text": "Colores sí, normales no", "correct": false},
+            {"text": "Colores no, normales sí", "correct": true}
+        ]
+    },
+    {
+        "question": "El Clip Space es",
+        "answers": [
+            {"text": "La región del espacio donde se transforma el world space", "correct": false},
+            {"text": "La región del espacio que se sitúa dentro del frustrum", "correct": true},
+            {"text": "La región del espacio vista desde la cámara", "correct": false},
+            {"text": "El espacio que se recorta para hacerlo coincidir con la ventana", "correct": false}
+        ]
+    },
+    {
+        "question": "Cuando vamos a dibujar los objetos con el z-buffer desactivado, y ordeno los objetos de atrás a delante",
+        "answers": [
+            {"text": "Puede fácilmente producirse z-fighting", "correct": false},
+            {"text": "Si ordeno los objetos no deberían producirse artefactos", "correct": true},
+            {"text": "Si además los transparentes van al final de todo, no deberían producirse artefactos", "correct": false},
+            {"text": "Se pueden producir artefactos, aunque ordene los objetos", "correct": false}
+        ]
+    },
+    {
+        "question": "En la versión 3.3. quiero hacer un objeto transparente, habilito el alpha test y:",
+        "answers": [
+            {"text": "Verifico que las texturas tienen canal alpha", "correct": true},
+            {"text": "Verifico que las texturas son 32 bits de profundidad", "correct": false},
+            {"text": "Verifico que las texturas sean gift, tiff, PPM, o TGA", "correct": false},
+            {"text": "El fragment shader permite gestionar la transparencia como el programador crea oportuno", "correct": false}
+        ]
+    },
+    {
+        "question": "Cuando vamos a dibujar los objetos teniendo en cuenta z-buffer",
+        "answers": [
+            {"text": "Debe de tenerse en cuenta los objetos con canal Alpha y deben ser dibujados primero", "correct": false},
+            {"text": "Es más efectivo si dibujamos primero los objetos lejanos y luego los cercanos", "correct": false},
+            {"text": "La efectividad no se ve afectada por el orden de los objetos, ya que el z-buffer lo resuelve", "correct": false},
+            {"text": "Es más efectivo si dibujamos primero los objetos cercanos y luego los lejanos", "correct": true}
+        ]
+    },
+    {
+        "question": "La matriz de proyección",
+        "answers": [
+            {"text": "Realiza la transformación del View Space al Clipping Space", "correct": true},
+            {"text": "Determina la posición de la cámara y el frustrum", "correct": false},
+            {"text": "Realiza la transformación de una escena para determinar el punto de vista del usuario", "correct": false},
+            {"text": "Realiza la transformación desde el World Space al View Space", "correct": false}
+        ]
+    },
+    {
+        "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 10 fps durante 50 frames, 25fps durante 50 frames, 50fps durante 50 frames, 25fps durante 50 frames ¿Cual es la tasa media de refresco en frames por segundo?",
+        "answers": [
+            {"text": "15fps", "correct": false},
+            {"text": "10fps", "correct": false},
+            {"text": "25fps", "correct": false},
+            {"text": "20fps", "correct": true}
+        ]
+    },
+    {
+        "question": "[E] Tengo un juego en mi ordenador que tiene las siguientes tasas de refresco: 20 fps durante 100frames, 50fps durante 100frames, 20fps durante 100frames, 10fps durante 100frames ¿Cual es la tasa media de refresco en frames por segundo?",
+        "answers": [
+            {"text": "26.2fps", "correct": false},
+            {"text": "32.2fps", "correct": false},
+            {"text": "20.1fps", "correct": false},
+            {"text": "18.1fps", "correct": true}
+        ]
+    },
+    {
+        "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (4, 1)] se transforme en el segmento [(2, 1) (2, 5)]",
+        "answers": [
+            {"text": "glTranslatef(0,0,0) glRotatef(0,0,1) glScalef(2,1,0) glTranslatef (2,1,0)dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": true},
+            {"text": "glTranslatef(2,-1,0) glScalef(2,1,0) glRotatef(0,0,1) glTranslatef(2,-1,0) dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(2,1,0) glScalef(1,2,0) glRotatef(0,0,1) glTranslatef(0,0,0) dibujo_segmento()", "correct": false}
+        ]
+    },
+    {
+        "question": "[E] Que secuencia de transformaciones producen que el fragmento [(2, 1) (2, 5)] se transforme en el segmento [(2, 1) (4, 1)]",
+        "answers": [
+            {"text": "glTranslatef(2,1,0) glScalef(0.5,1,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": true},
+            {"text": "glTranslatef(2,1,0) glRotatef(-90,0,0,1) glScalef(0.5,1,0) glTranslatef (-2,-1,0)dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(0,0,0) glScalef(1,-0.5,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false},
+            {"text": "glTranslatef(0,0,0) glScalef(-0.5,1,0) glRotatef(-90,0,0,1) glTranslatef(-2,-1,0) dibujo_segmento()", "correct": false}
+        ]
+    },
+    {
+        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 1) (0 0 0) (-1 1 0) (-1 0 0)",
+        "answers": [
+            {"text": "Al primer triangulo le falta un trozo, el segundo se ve bien", "correct": false},
+            {"text": "Veo dos triangulos de igual tamaño", "correct": true},
+            {"text": "Al segundo triangulo le falta un trozo, el primero se ve bien", "correct": false},
+            {"text": "Veo dos triangulos de diferente tamaño", "correct": false}
+        ]
+    },
+    {
+        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 1) (1 1 0) (0 0 -1) (0 0 1) (1 1 1) (0 1 1)",
+        "answers": [
+            {"text": "Se ve el primero, el segundo se corta", "correct": false},
+            {"text": "Veo dos triangulos cruzados", "correct": false},
+            {"text": "Veo un cuadrado", "correct": false},
+            {"text": "Veo un triangulo", "correct": true}
+        ]
+    },
+    {
+        "question": "[E] Dadas las condiciones por defecto de la camara y habilitada la ocultacion de caras veré los siguientes triángulos (0 0 0) (1 0 0) (1 1 0) (0 0 0) (-1 1 0) (-1 0 0)",
+        "answers": [
+            {"text": "Si el primero, No el segundo", "correct": false},
+            {"text": "No, ninguno", "correct": false},
+            {"text": "No el primero, Si el segudno", "correct": false},
+            {"text": "Si, los dos", "correct": true}
+        ]
+    },
+    {
+        "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 1024*760 y una velocidad de refresco de 30fps",
+        "answers": [
+            {"text": "0.000012s", "correct": false},
+            {"text": "0.000015s", "correct": false},
+            {"text": "0.000032s", "correct": true},
+            {"text": "0.000025s", "correct": false}
+        ]
+    },
+    {
+        "question": "[E] Cuanto tiempo se necesitara para barrer cada columna de pixeles durante el refresco de la pantalla en un sistema ‘raster’ con una resolucion de 640*480 y una velocidad de refresco de 30fps",
+        "answers": [
+            {"text": "0.000012s", "correct": false},
+            {"text": "0.000015s", "correct": false},
+            {"text": "0.000032s", "correct": false},
+            {"text": "0.000025s", "correct": false},
+            {"text": "Ninguna -> 1/30fps/640píxeles de fila = 0.000052s", "correct": true}
+        ]
     }
 ]
