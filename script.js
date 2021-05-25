@@ -1,6 +1,6 @@
 'use strict';
 
-const TYPES = ["Test", "Ejercicios", "Examen"];
+const TYPES = ["Test", "Ejercicios", "Examen", "Diapos"];
 const QUESTIONS = [];
 
 function standarize(txt) {

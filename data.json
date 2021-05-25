@@ -966,5 +966,26 @@
         ],
         "help": "1/30 = tiempo en renderizar un frame | (1/30)/1024 = tiempo en renderizar una columna",
         "type": 2
+    },
+    {
+        "question": "¿Quién invento/patento el primer video juegos?",
+        "answers": [
+            {"text": "Nolan Bushnell", "correct": false},
+            {"text": "Willy Higinbotham", "correct": true},
+            {"text": "Ted Dabney", "correct": false},
+            {"text": "Shigeru Miyamoto", "correct": false},
+            {"text": "John D. Carmack", "correct": false}
+        ],
+        "type": 4
+    },
+    {
+        "question": "El vertex shader y el fragmet shader permiten",
+        "answers": [
+            {"text": "Vertex shader modificar el color y el fragmet shader posicionar los vértices", "correct": false},
+            {"text": "Vertex shader crea vértices y el fragmet shader fragmenta los vértices", "correct": false},
+            {"text": "Vertex shader mueve los vértices y el fragmet shader modificar el color", "correct": true},
+            {"text": "Vertex shader crea caras y el fragmet shader divide las caras en elementos pequeños a ser dibujados", "correct": false}
+        ],
+        "type": 4
     }
 ]
