@@ -39,6 +39,7 @@ const renderQuestionCard = (question) => {
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
+    cardBody.style.paddingBottom = "0.0rem";
 
     const cardTitle = document.createElement("h5");
     cardTitle.classList.add("card-title");

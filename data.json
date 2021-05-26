@@ -13,12 +13,12 @@
     {
         "question": "Como se puede introducir la atenuacion de un foco en función de la distancia en el modelo de iluminación de Phong?",
         "answers": [
-            {"text": "Mediante los parámetros de una cuadrática y su multiplicación por los valores de la luz", "correct": false},
+            {"text": "Mediante los parámetros de una cuadrática y su multiplicación por los valores de la luz", "correct": true},
             {"text": "Mediante el CUT_OFF o pasando el valor de la distacia al fragment shader", "correct": false},
             {"text": "En la version 1.2 no se puede, en la 3.3 lo hacemos en el fragment shader", "correct": false},
-            {"text": "Mediante el GL_SPOT_EXPONENT o pasando la distancia al fragment shader", "correct": true}
+            {"text": "Mediante el GL_SPOT_EXPONENT o pasando la distancia al fragment shader", "correct": false}
         ],
-        "help": "GL_SPOT_EXPONENT indica que la intensidad de la luz varie en función de la distancia al foco (como un cono, no en perpendicular)",
+        "help": "La función constant + distance*linear + distance*quadratic2 es el resultado de la luz, por lo que se atenua en función de la distancia",
         "type": 1
     },
     {
