@@ -512,7 +512,7 @@
             {"text": "La efectividad no se ve afectada por el orden de los objetos, ya que el z-buffer lo resuelve", "correct": false},
             {"text": "Es más efectivo si dibujamos primero los objetos cercanos y luego los lejanos", "correct": true}
         ],
-        "help": "El z-buffer se va incrementando cuanto más lejos están, por lo que para evitar números negativos o muy grandes, se debe empezar con el más cercano",
+        "help": "El z-buffer se va incrementando cuanto más lejos están, por lo que para evitar números negativos, se debe empezar con el más cercano",
         "type": 1
     },
     {
@@ -986,6 +986,76 @@
             {"text": "Vertex shader mueve los vértices y el fragmet shader modificar el color", "correct": true},
             {"text": "Vertex shader crea caras y el fragmet shader divide las caras en elementos pequeños a ser dibujados", "correct": false}
         ],
+        "help": "El vertex trabaja posiciones y fragment estilo",
+        "type": 4
+    },
+    {
+        "question": "Dada la ecuación que da valor al z-buffer y dados dos objetos, ¿cuándo es más fácul distinguir su profundidad?",
+        "answers": [
+            {"text": "Es lo mismo, se calculan igual", "correct": false},
+            {"text": "Si están lejos", "correct": false},
+            {"text": "Si están cerca", "correct": true},
+            {"text": "Depende de la tarjeta gráfica", "correct": false}
+        ],
+        "help": "Cuanto más cerca de la cámara, mejor se perciben las distancias relativamente",
+        "type": 4
+    },
+    {
+        "question": "Teniendo en cuenta que para dibujar deberemos leer el valor del z-buffer, compararlo, escribir el nuevo valor, y actualizar el z-buffer, ¿qué será lo mejor?",
+        "answers": [
+            {"text": "Dibujar los objetos aleatoriamente", "correct": false},
+            {"text": "Dibujar los objetos de back to front", "correct": false},
+            {"text": "Dibujar los objetos de front to back", "correct": true}
+        ],
+        "help": "Si se empieza lo más pegado a la cámara, simplemente hay que ir aumentando el valor de manera secuencial",
+        "type": 4
+    },
+    {
+        "question": "¿Qué técnica usa normalmente en el cine en 3D?",
+        "answers": [
+            {"text": "Activo", "correct": false},
+            {"text": "Pasivo", "correct": false},
+            {"text": "Las dos combinadas", "correct": false},
+            {"text": "Ninguna", "correct": false}
+        ],
+        "type": 4
+    },
+    {
+        "question": "Si un objeto queda dentro y fuera del frustum, que pasa con el",
+        "answers": [
+            {"text": "Lo veo", "correct": false},
+            {"text": "No lo veo", "correct": false},
+            {"text": "Solo veo la mitad que se encuentra dentro", "correct": true}
+        ],
+        "type": 4
+    },
+    {
+        "question": "Imaginemos un shooter en un laberinto o habitaciones. El programador ha puesto un near de 1m pero yo me acerco a las paredes a 0.5m. Que pasará al acercarme a la pared?",
+        "answers": [
+            {"text": "Se verá todo negro", "correct": false},
+            {"text": "Se verá la habitación de al lado", "correct": true},
+            {"text": "Chocaré y me quedaré atascado", "correct": false}
+        ],
+        "type": 4
+    },
+    {
+        "question": "Si quiero dividir mi ventana en 4 secciones para visualizar planta alzado y perfil, como lo hago?",
+        "answers": [
+            {"text": "Genero 4 ventanas", "correct": false},
+            {"text": "Genero 4 viewports", "correct": true},
+            {"text": "Muevo la cámara y elijo la proyección", "correct": false},
+            {"text": "Otros", "correct": false}
+        ],
+        "type": 4
+    },
+    {
+        "question": "Quiero visualizar un modelo desde distintos puntos de vista moviéndome con el teclado, como lo hago?",
+        "answers": [
+            {"text": "Muevo la cámara", "correct": true},
+            {"text": "Muevo el modelo", "correct": false},
+            {"text": "Muevo el modelo y la cámara", "correct": false}
+        ],
+        "help": "Para poder usar el teclado sin tener que invertir los controles, solo moviendo la camara se puede conseguir",
         "type": 4
     }
 ]
