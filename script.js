@@ -181,7 +181,9 @@ function update() {
 }
 
 function getQuestions() {
-    fetch("." + window.location.pathname.split('.').slice(0, -1).join('.') + ".json")
+    var parts = window.location.pathname.split('.').slice(0, -1).join('.').split('/');
+    var path = parts.pop() || parts.pop();  
+    fetch(path + ".json")
         .then(response => response.json())
         .then(data => {
             data.forEach(q => QUESTIONS.push(q));

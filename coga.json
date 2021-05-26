@@ -92,10 +92,10 @@
         "answers": [
             {"text": "Si pero tengo que tener una tabla de materiales", "correct": false},
             {"text": "Las caras se verian diferentes debido a la luz ambiente", "correct": false},
-            {"text": "Las caras se verian diferentes debido a la luz difusa y especular", "correct": false},
-            {"text": "Al tener las mismas normales las caras se verian igual", "correct": true}
+            {"text": "Las caras se verian diferentes debido a la luz difusa y especular", "correct": true},
+            {"text": "Al tener las mismas normales las caras se verian igual", "correct": false}
         ],
-        "help": "El sombreado FLAT depende de las normales para ver como se ilumina",
+        "help": "Las luces no afectarían a las sombras, por lo que la especular haría que se viesen distintos",
         "type": 1
     },
     {
