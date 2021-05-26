@@ -551,7 +551,7 @@
     {
         "question": "El double buffer",
         "answers": [
-            {"text": "Evita el parpadeu durante la generación de la imagen", "correct": true},
+            {"text": "Evita el parpadeo durante la generación de la imagen", "correct": true},
             {"text": "Debemos desactivarlo pues por defecto se encuentra activado y ralentiza el procesamiento", "correct": false},
             {"text": "Ocupa mucho tamaño por lo que debe evitarse", "correct": false},
             {"text": "Aumenta la velocidad de procesamiento de las imágenes", "correct": false}
@@ -662,7 +662,7 @@
         "question": "En OpenGL, la normal en un triángulo",
         "answers": [
             {"text": "Solo sirve para hacer el cullface", "correct": false},
-            {"text": "Se puede determianr por triángulo o por vértice", "correct": true},
+            {"text": "Se puede determinar por triángulo o por vértice", "correct": true},
             {"text": "Se calcula automáticamente", "correct": false},
             {"text": "Es difícil de calcular y solo se usa en el proceso de iluminación", "correct": false}
         ],
@@ -740,7 +740,7 @@
         "question": "En una proyección ortográfica",
         "answers": [
             {"text": "Los objetos más alejados se muestran detrás de los más cercanos", "correct": false},
-            {"text": "Los objetos s even más pequeños cuanto más lejos estén", "correct": false},
+            {"text": "Los objetos se ven más pequeños cuanto más lejos estén", "correct": false},
             {"text": "La distancia al objeto no determina su tamaño", "correct": true},
             {"text": "Los objetos son todos del mismo tamaño", "correct": false}
         ],
