@@ -100,15 +100,14 @@ const renderQuestionAccordion = (question) => {
 };
 
 function getTypesDisplay() {
-    const cb1 = document.getElementById("cb1");
-    const cb2 = document.getElementById("cb2");
-    const cb3 = document.getElementById("cb3");
+    const checks = [];
+    
+    TYPES.forEach((type, id) => {
+        const cb = document.getElementById("cb" + id);
+        checks.push(cb.checked);
+    });
 
-    if (!cb1.checked && !cb2.checked && !cb3.checked) {
-        return [true, true, true];
-    }
-
-    return [cb1.checked, cb2.checked, cb3.checked];
+    return checks;
 }
 
 function renderCard() {
@@ -190,8 +189,35 @@ function getQuestions() {
         });
 }
 
+function renderCheckboxes() {
+    const container = document.getElementById("cb");
+
+    TYPES.forEach((type, id) => {
+        const formCheck = document.createElement("div");
+        formCheck.classList.add("form-check");
+        formCheck.classList.add("form-check-inline");
+        formCheck.classList.add("mt-1");
+
+        const input = document.createElement("input");
+        input.classList.add("form-check-input");
+        input.type = "checkbox";
+        input.id = "cb" + id;
+        input.value = type.toLowerCase();
+        input.checked = true;
+        input.addEventListener("change", update);
+
+        const label = document.createElement("label");
+        label.classList.add("form-check-label");
+        label.htmlFor = "cb" + id;
+        label.innerText = type;
+
+        formCheck.appendChild(input);
+        formCheck.appendChild(label);
+
+        container.appendChild(formCheck);
+    });
+}
+
 document.getElementById("txtSearch").addEventListener("input", update);
-document.getElementById("cb1").addEventListener("change", update);
-document.getElementById("cb2").addEventListener("change", update);
-document.getElementById("cb3").addEventListener("change", update);
+renderCheckboxes();
 getQuestions();
