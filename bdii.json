@@ -1,5 +1,5 @@
 {
-    "types": ["T2/P1", "T2/P2"],
+    "types": ["T2/P1", "T2/P2", "T2/P3", "T2/P4", "T3", "T4/P1", "T4/P2", "T5", "T6-7"],
     "questions": [
         {
             "question": "Se denomina transacción a un conjunto de operaciones ...",
@@ -394,6 +394,136 @@
                 {"text": "Porque las técnicas de bloqueo pueden crear estados inconsistentes", "correct": false}
             ],
             "type": 2
+        },
+        {
+            "question": "No es un paso del procesamiento de una consulta",
+            "answers": [
+                {"text": "Evaluación", "correct": false},
+                {"text": "Optimización", "correct": false},
+                {"text": "Modelado conceptual", "correct": true},
+                {"text": "Análisis y traducción", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "De estos lenguajes, ¿cuál se emplearía por el optimizador de consultas?",
+            "answers": [
+                {"text": "Álgebra Relacional Extendida (ARE)", "correct": true},
+                {"text": "Database Access Optimizer (DAO)", "correct": false},
+                {"text": "Structured Query Language (SQL)", "correct": false},
+                {"text": "Single Optimum Access Protocol (SOAP)", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "¿Cuál es el coste más importante en una consulta?",
+            "answers": [
+                {"text": "Coste de transferencia de datos en memoria intermedia", "correct": false},
+                {"text": "Coste del acceso a los datos en memoria intermedia", "correct": false},
+                {"text": "Coste de transferencia de datos en disco no volátil", "correct": false},
+                {"text": "Coste del acceso a los datos en disco no volátil", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "El coste de una evaluación materializada es igual a la suma de los costes de las operaciones involucradas",
+            "answers": [
+                {"text": "Verdadero", "correct": false},
+                {"text": "Falso", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "¿Que consulta representa el siguiente plan de ejecución (sólo operaciones)?",
+            "answers": [
+                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2; WHERE A1>0)", "correct": false},
+                {"text": "SELECT B2, B3; FROM R2, (SELECT A2, A2; FROM R1; WHERE A1>0)", "correct": false},
+                {"text": "SELECT B2, B3; FROM R2, (SELECT A1, A2; FROM R1; WHERE A1>0)", "correct": false},
+                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2); WHERE A1>0", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "Todas las conexiones de primitvas de evaluación se pueden realizar mediante encauzamiento",
+            "answers": [
+                {"text": "Verdadero", "correct": false},
+                {"text": "Falso", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "¿Qué no contiene un plan de ejecución de una consulta?",
+            "answers": [
+                {"text": "Los algoritmos a utilizar en cada operación", "correct": false},
+                {"text": "Las relaciones de la base de datos", "correct": false},
+                {"text": "La sintáxis SQL óptima de la consulta", "correct": true},
+                {"text": "La coordinación de operaciones (materialización o encauzamiento)", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "?????",
+            "answers": [
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "?????",
+            "answers": [
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "Las consultas se pueden expresar de varias maneras diferentes, con costes de evaluación distintos",
+            "answers": [
+                {"text": "Falso", "correct": false},
+                {"text": "Verdadero", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "¿Qué tiene que coincidir para que dos expresiones del álgebra relaciones se consideren equivalentes?",
+            "answers": [
+                {"text": "Generar las tuplas en el mismo orden", "correct": false},
+                {"text": "Generar el mismo conjunto de tuplas", "correct": true},
+                {"text": "Tardar el mismo tiempo", "correct": false},
+                {"text": "Estar formadas por las mismas primitivas de evaluación", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "Las estimaciones de estadísticas, usadas en la optimización de consultas, no son muy precisas",
+            "answers": [
+                {"text": "Falso", "correct": false},
+                {"text": "Verdadero", "correct": true}
+            ],
+            "type": 7
+        },
+        {
+            "question": "Los optimizadores usan reglas generales que reducen el coste de optimización (a riesgo de no encontrar el plan óptimo)",
+            "answers": [
+                {"text": "Verdadero", "correct": true},
+                {"text": "Falso", "correct": false}
+            ],
+            "type": 7
+        },
+        {
+            "question": "¿Cómo puede un programador mejorar el coste de una consulta?",
+            "answers": [
+                {"text": "Retrasando todo lo posible las operaciones de proyección y selección", "correct": false},
+                {"text": "Adelantando todo lo posible las operaciones de proyección y selección", "correct": true},
+                {"text": "No se puede hacer nada para mejorar el coste de una consulta", "correct": false},
+                {"text": "Adelantando todo lo posible las operaciones de reunión", "correct": false}
+            ],
+            "type": 7
         }
     ]
 }
