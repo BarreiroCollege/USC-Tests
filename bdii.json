@@ -1,0 +1,25 @@
+{
+    "types": ["T2/P1", "T2/P2"],
+    "questions": [
+        {
+            "question": "Se denomina transacción a un conjunto de operaciones ...",
+            "answers": [
+                {"text": "... que forman una unidad lógica de trabajo", "correct": true},
+                {"text": "... consecutivas relacionadas por temática", "correct": false},
+                {"text": "... a realizar en una Base de Datos desde un lenguaje de programación", "correct": false},
+                {"text": "... consecutivas del tipo SELECT ... FROM ... WHERE", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Una transacción puede realizarse de forma NO completa en el siguiente caso",
+            "answers": [
+                {"text": "Nunca", "correct": true},
+                {"text": "Siempre", "correct": false},
+                {"text": "Sólo cuando está aislada", "correct": false},
+                {"text": "Siempre que no sea concurrente", "correct": false}
+            ],
+            "type": 1
+        }
+    ]
+}

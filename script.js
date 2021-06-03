@@ -1,6 +1,6 @@
 'use strict';
 
-const TYPES = ["Test", "Ejercicios", "Examen", "Diapos"];
+const TYPES = [];
 const QUESTIONS = [];
 
 function standarize(txt) {
@@ -181,12 +181,15 @@ function update() {
 }
 
 function getQuestions() {
-    var parts = window.location.pathname.split('.').slice(0, -1).join('.').split('/');
-    var path = parts.pop() || parts.pop();  
-    fetch(path + ".json")
+    var url = new URL(window.location.href);
+    document.getElementById("title").innerText = url.searchParams.get("title");
+    document.getElementsByTagName("title")[0].innerText = url.searchParams.get("title") + " | Tests";
+    fetch(url.searchParams.get("json").toLowerCase() + ".json")
         .then(response => response.json())
         .then(data => {
-            data.forEach(q => QUESTIONS.push(q));
+            data.types.forEach(q => TYPES.push(q));
+            renderCheckboxes();
+            data.questions.forEach(q => QUESTIONS.push(q));
             update();
         });
 }
@@ -221,5 +224,4 @@ function renderCheckboxes() {
 }
 
 document.getElementById("txtSearch").addEventListener("input", update);
-renderCheckboxes();
 getQuestions();
