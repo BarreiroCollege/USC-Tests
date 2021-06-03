@@ -196,6 +196,204 @@
                 {"text": "... planificación aislada", "correct": false}
             ],
             "type": 1
+        },
+        {
+            "question": "Cuando una planificación se puede transformar en otra meidante pasos no conflictivos se dice que ambas son ...",
+            "answers": [
+                {"text": "... Equivalentes", "correct": true},
+                {"text": "... Isomorfas", "correct": false},
+                {"text": "... Inconcurrentes", "correct": false},
+                {"text": "... Secuenciables", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Una planificación secuencial es siempre secuenciable",
+            "answers": [
+                {"text": "Verdadero", "correct": true},
+                {"text": "Falso", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Instrucciones de lectura/escritura en dos transacciones sobre datos diferentes, ¿generan conflictos al intercambiarlas?",
+            "answers": [
+                {"text": "No, nunca", "correct": true},
+                {"text": "Si, siempre", "correct": false},
+                {"text": "Si, si las dos son de lectura", "correct": false},
+                {"text": "Si, si al menos una es de escritura", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿Cuál de las siguientes parejas de instrucciones NO genera conflictos al intercambiarlas?",
+            "answers": [
+                {"text": "leer(A) en T1 con leer(A) en T2", "correct": true},
+                {"text": "leer(A) en T1 con escribir(A) en T2", "correct": false},
+                {"text": "escribir(A) en T1 con leer(A) en T2", "correct": false},
+                {"text": "escribir(A) en T1 con escribir(A) en T2", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es secuenciable? T1=leer(A) T2=leer(C) T1=leer(B) T2=escribir(C) T1=escribir(A) T2=leer(D) T1=escribir(B) T2=escribir(D)",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es secuenciable? T1=leer(A) T1=escribir(A) T2=leer(A) T2=escribir(A) T1=leer(B) T1=escribir(B) T2=leer(B) T2=escribir(B)",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es secuenciable? T1=leer(A) T1=leer(B) T2=leer(A) T2=escribir(A) T1=escribir(A) T1=escribir(B) T2=leer(B) T2=escribir(B)",
+            "answers": [
+                {"text": "Si", "correct": false},
+                {"text": "No", "correct": true}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es secuenciable? T1=leer(A) T1=A=A-50 T1=escribir(A) T2=leer(B) T2=B=B-10 T2=escribir(B) T1=leer(B) T1=B=B+50 T1=escribir(B) T2=leer(A) T2=A=A+10 T2=escribir(A)",
+            "answers": [
+                {"text": "Si", "correct": false},
+                {"text": "No", "correct": true}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada genera el mismo resultado que la planificación secuencial T1:T2 (Primero T1, Después T2)? T1=leer(A) T1=A=A-50 T1=escribir(A) T2=leer(B) T2=B=B-10 T2=escribir(B) T1=leer(B) T1=B=B+50 T1=escribir(B) T2=leer(A) T2=A=A+10 T2=escribir(A)",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Para determinar la secuencialidad en cuanto a conflictos de una planificación se puede usar ...",
+            "answers": [
+                {"text": "... un grafo de precedencia", "correct": true},
+                {"text": "... un árbol de precedencia", "correct": false},
+                {"text": "... un registro de precedencia", "correct": false},
+                {"text": "... una relación de precedencia", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Las aristras de un grafo de precedencia representan transacciones ...",
+            "answers": [
+                {"text": "... cun instrucciones no intercambiables por conflictos de lectura/escritura", "correct": true},
+                {"text": "... prioritarias en el acceso a los datos", "correct": false},
+                {"text": "... cuyo intercambio generaría planificaciones no secuenciables", "correct": false},
+                {"text": "... que realizan operaciones con los mismos datos", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Una planificación recuperable es aquella en la que, si T2 lee datos que ha escrito T1, ...",
+            "answers": [
+                {"text": "... la transacción T1 se compromete antes que la transacción T2", "correct": true},
+                {"text": "... la transacción T2 se compromete antes que la transacción T1", "correct": false},
+                {"text": "... la transacción T1 no se compromete", "correct": false},
+                {"text": "... la transacción T2 no se compromete", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es recuperable? T1=escribir(A) T1=commit T2=leer(A) T2=commit",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es recuperable? T1=escribir(A) T2=leer(A) T2=commit T1=commit",
+            "answers": [
+                {"text": "Si", "correct": false},
+                {"text": "No", "correct": true}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es recuperable? T2=leer(A) T1=escribir(A) T2=commit T1=commit",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Una planificación recuperable sin cascada es aquella en la que, si T2 lee datos que ha escrito T1, ...",
+            "answers": [
+                {"text": "... la transacción T1 se compromete antes que la operación de lectura T2", "correct": true},
+                {"text": "... la operación de escritura de T1 aparece antes de que T2 se comprometa", "correct": false},
+                {"text": "... la transacción T1 se compromete antes que la transacción T2", "correct": false},
+                {"text": "... la operación de escritura de T1 aparece antes que la operación de lectura de T2", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es recuperable sin cascada? T1=escribir(A) T2=leer(A) T1=commit T2=commit",
+            "answers": [
+                {"text": "Si", "correct": false},
+                {"text": "No", "correct": true}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿La planificación mostrada es recuperable sin cascada? T1=escribir(A) T1=commit T2=leer(A) T2=commit",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Muchos sistemas de bases de datos se ejecutan, de forma predeterminada, en el nivel de aislamiento ...",
+            "answers": [
+                {"text": "... lectura comprometida (leer datos comprometidos)", "correct": true},
+                {"text": "... secuenciable (normalmente asegura la ejecución secuencial)", "correct": false},
+                {"text": "... lectura repetible (comprometida y entre lecturas no hay actualización)", "correct": false},
+                {"text": "... lectura no comprometida (permite leer datos no comprometidos)", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿Qué nivel de aislamiento permite \"escrituras sucias\" (escribir datos escritos antes por transacción no comprometida)?",
+            "answers": [
+                {"text": "Ninguno", "correct": true},
+                {"text": "Todos", "correct": false},
+                {"text": "Sólo lectura no comprometida", "correct": false},
+                {"text": "Sólo lectura no repetible", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "Las técnicas básicas de bloqueo sobre datos se pueden mejorar introduciendo dos tipos distintos de bloqueo",
+            "answers": [
+                {"text": "Compartidos para lectura y exclusivos para escrituras", "correct": true},
+                {"text": "Compartidos para escrituras y exclusivos para lecturas", "correct": false},
+                {"text": "Multiversión para lecturas e instantáneas para escrituras", "correct": false},
+                {"text": "Multiversión para escrituras e instantáneas para lecturas", "correct": false}
+            ],
+            "type": 2
+        },
+        {
+            "question": "¿Por qué el aislamiento de instantáneas es mejor, en términos de rendimiento, que las técnicas de bloqueo?",
+            "answers": [
+                {"text": "Porque los intentos de leer datos nunca tienen que esperar", "correct": true},
+                {"text": "Porque las transcciones que sólo realizan lecturas se pueden abortar", "correct": false},
+                {"text": "Porque la lectura de datos hace que las actualizaciones tengan que esperar", "correct": false},
+                {"text": "Porque las técnicas de bloqueo pueden crear estados inconsistentes", "correct": false}
+            ],
+            "type": 2
         }
     ]
 }
