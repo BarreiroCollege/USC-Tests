@@ -74,10 +74,10 @@
         {
             "question": "¿Qué propiedad ACID es responsabilidad del programador que codifica la transacción?",
             "answers": [
-                {"text": "Durabilidad (Durability)", "correct": true},
+                {"text": "Consistencia (Consistency)", "correct": true},
                 {"text": "Atomicidad (Atomicity)", "correct": false},
-                {"text": "Consistencia (Consistency)", "correct": false},
-                {"text": "Aislamiento (Isolation)", "correct": false}
+                {"text": "Aislamiento (Isolation)", "correct": false},
+                {"text": "Durabilidad (Durability)", "correct": false}
             ],
             "type": 1
         },
