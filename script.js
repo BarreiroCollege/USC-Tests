@@ -181,10 +181,14 @@ function update() {
 }
 
 function getQuestions() {
-    var url = new URL(window.location.href);
-    document.getElementById("title").innerText = url.searchParams.get("title");
-    document.getElementsByTagName("title")[0].innerText = url.searchParams.get("title") + " | Tests";
-    fetch(url.searchParams.get("json").toLowerCase() + ".json")
+    const url = new URL(window.location.href);
+    const title = decodeURI(url.searchParams.get("title"));
+    const json = url.searchParams.get("json");
+
+    document.getElementById("title").innerText = title;
+    document.getElementsByTagName("title")[0].innerText = title + " | Tests";
+
+    fetch(json + ".json")
         .then(response => response.json())
         .then(data => {
             data.types.forEach(q => TYPES.push(q));
