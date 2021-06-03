@@ -20,6 +20,182 @@
                 {"text": "Siempre que no sea concurrente", "correct": false}
             ],
             "type": 1
+        },
+        {
+            "question": "¿Es posible la ejecución a la vez de varias transacciones?",
+            "answers": [
+                {"text": "Si, siempre que no se introducen inconsistencias en los datos", "correct": true},
+                {"text": "Si, siempre", "correct": false},
+                {"text": "Si, siempre que afecten a datos diferentes", "correct": false},
+                {"text": "No, nunca", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "O bien todas las operaciones de la transacción se realizan adecuadamente o no lo hace ninguna de ellas",
+            "answers": [
+                {"text": "Atomicidad (Atomicity)", "correct": true},
+                {"text": "Consistencia (Consistency)", "correct": false},
+                {"text": "Aislamiento (Isolation)", "correct": false},
+                {"text": "No es una definición de una propiedad ACID", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "La ejecución aislada de una transacción, bien codificada, no tiene porqué conservar la consistencia de la base de datos",
+            "answers": [
+                {"text": "No es una definición de una propiedad ACID", "correct": true},
+                {"text": "Atomicidad (Atomicity)", "correct": false},
+                {"text": "Consistencia (Consistency)", "correct": false},
+                {"text": "Aislamiento (Isolation)", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Cuando se ejecutan transacciones de forma concurrente, estas comparten los datos comunes ejecutándse todas o ninguna",
+            "answers": [
+                {"text": "No es una definición de una propiedad ACID", "correct": true},
+                {"text": "Atomicidad (Atomicity)", "correct": false},
+                {"text": "Consistencia (Consistency)", "correct": false},
+                {"text": "Aislamiento (Isolation)", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Tras el éxito de una transacción, los cambios realizados permanence, incluso aunque se produzcan fallos del sistema",
+            "answers": [
+                {"text": "Durabilidad (Durability)", "correct": true},
+                {"text": "No es una definición de una propiedad ACID", "correct": false},
+                {"text": "Consistencia (Consistency)", "correct": false},
+                {"text": "Aislamiento (Isolation)", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "¿Qué propiedad ACID es responsabilidad del programador que codifica la transacción?",
+            "answers": [
+                {"text": "Durabilidad (Durability)", "correct": true},
+                {"text": "Atomicidad (Atomicity)", "correct": false},
+                {"text": "Consistencia (Consistency)", "correct": false},
+                {"text": "Aislamiento (Isolation)", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Modificación en la BD realizada por transacción vs anotación en registro de la modificación que realizará la transacción",
+            "answers": [
+                {"text": "Primero se anota en el registro la modificación y luego se ejecuta", "correct": true},
+                {"text": "Primero se ejecuta la modificación y luego se anota en el registro", "correct": false},
+                {"text": "Se hacen simultáneamente para garantizar la atomicidad y la durabilidad", "correct": false},
+                {"text": "El orden no es importante", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Estado tras descubrir que no puede continuar la ejecución normal (errores de hardware o lógicos)",
+            "answers": [
+                {"text": "Transacción Fallida", "correct": true},
+                {"text": "Transacción Activa", "correct": false},
+                {"text": "No es un estado de una transacción", "correct": false},
+                {"text": "Transacción Comprometida", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Estado en que permanence la transacción durante su ejecución",
+            "answers": [
+                {"text": "Transacción Activa", "correct": true},
+                {"text": "Transacción Fallida", "correct": false},
+                {"text": "No es un estado de una transacción", "correct": false},
+                {"text": "Transacción Comprometida", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Estado tras descubrir que una transacción ha resultado fallida sólo mientras se consulta el registro de operaciones",
+            "answers": [
+                {"text": "No es un estado de una transacción", "correct": true},
+                {"text": "Transacción Activa", "correct": false},
+                {"text": "Transacción Abortada", "correct": false},
+                {"text": "Transacción Parcialmente Abortada", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "¿Existe un estado de una transacción denominado \"Parcialmente Comprometida\"?",
+            "answers": [
+                {"text": "Si, después de terminar pero antes de que la información esté grabada", "correct": true},
+                {"text": "Si, tras la ejecución de cada sentencia, salvo la última", "correct": false},
+                {"text": "Si, después de la primera sentencia y hasta que se ejecuta la última", "correct": false},
+                {"text": "No, del estado \"Activa\" se pasa al estado \"Comprometida\"", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "¿Se pueden deshacer los cambios realizados por una transacción comprmetida?",
+            "answers": [
+                {"text": "Sólo mediante una transacción compensadora realizada por el usuario", "correct": true},
+                {"text": "Retrocediendo la transacción a parcialmente comprometida y abordándola", "correct": false},
+                {"text": "El sistema hace transacciones compensadoras cuando detecta la necesidad", "correct": false},
+                {"text": "No, nunca: va en contra de la durabilidad", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "¿Cuál NO es una ventaja de la ejecución concurrente de transacciones?",
+            "answers": [
+                {"text": "Reducción de los fallos del sistema", "correct": true},
+                {"text": "Mejora del rendimiento del sistema", "correct": false},
+                {"text": "Mejora del uso de los recursos", "correct": false},
+                {"text": "Reducción del tiempo de espera", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "¿Qué es una planificación?",
+            "answers": [
+                {"text": "El orden de ejecución de las instrucciones de un conjunto de transacciones", "correct": true},
+                {"text": "El orden de ejecución de las transacciones en un conjunto de transacciones", "correct": false},
+                {"text": "El estudio de las concurrencias a nivel de datos de las transacciones", "correct": false},
+                {"text": "El estudio de las concurrencias a nivel de transacciones de los datos", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Todas las planificaciones posibles generan un estado consistente en la base de datos",
+            "answers": [
+                {"text": "Verdadero", "correct": false},
+                {"text": "Falso", "correct": true}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Todas las planificaciones posibles que generan estados consistentes llegan al mismo final",
+            "answers": [
+                {"text": "Verdadero", "correct": false},
+                {"text": "Falso", "correct": true}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Planificación secuencial: Secuencia de instrucciones de varias transacciones ...",
+            "answers": [
+                {"text": "... en la que todas las instrucciones de cada transacción están juntas", "correct": true},
+                {"text": "... en la que las instrucciones de lectura de cada transacción están juntas", "correct": false},
+                {"text": "... en la que las instrucciones de escritura de cada transacción están juntas", "correct": false},
+                {"text": "... en la que las instrucciones de cada transacción están divididas en grupos", "correct": false}
+            ],
+            "type": 1
+        },
+        {
+            "question": "Una planificación que asegure que la ejecución concurrente tiene el mismo efecto que sin concurrencia se denomina ...",
+            "answers": [
+                {"text": "... planificación serializable", "correct": true},
+                {"text": "... planificación secuencial", "correct": false},
+                {"text": "... planificación concurrente", "correct": false},
+                {"text": "... planificación aislada", "correct": false}
+            ],
+            "type": 1
         }
     ]
 }
