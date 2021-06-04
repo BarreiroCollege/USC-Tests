@@ -188,7 +188,7 @@ function getQuestions() {
     document.getElementById("title").innerText = title;
     document.getElementsByTagName("title")[0].innerText = title + " | Tests";
 
-    fetch(json + ".json")
+    fetch("data/" + json + ".json")
         .then(response => response.json())
         .then(data => {
             data.types.forEach(q => TYPES.push(q));
