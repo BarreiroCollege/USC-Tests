@@ -396,6 +396,172 @@
             "type": 2
         },
         {
+            "question": "¿Cuáles son los dos esquemas de control de concurrencia más utilizados?",
+            "answers": [
+                {"text": "Bloqueo en dos fases y Aislamiento de instantáneas", "correct": true},
+                {"text": "Bloqueo compartido y Bloqueo exclusivo", "correct": false},
+                {"text": "Protocolos basados en marcas temporales y Bloqueo en dos fases", "correct": false},
+                {"text": "Protocolos basados en validación y Aislamiento de instantáneas", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "Los protocolos basados en bloqueos se basan en que ninguna transacción puede modificar un dato mientras ...",
+            "answers": [
+                {"text": "... otra previa puede modificar el mismo dato", "correct": true},
+                {"text": "... no se actualiza la copia local de los datos", "correct": false},
+                {"text": "... las marcas temporales no se modifican", "correct": false},
+                {"text": "... la transacción previa no finalice", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "Completar: Una transacción obtiene un bloqueo _________ sobre el dato X cuando puede leerlo pero no lo puede escribir",
+            "answers": [
+                {"text": "Compartido", "correct": true},
+                {"text": "Exclusivo", "correct": false},
+                {"text": "Relativo", "correct": false},
+                {"text": "Parcial", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "El conjunto de reglas que indican cuando una transacción puede bloquear y desbloquear un dato se denomina ...",
+            "answers": [
+                {"text": "Protocolo de bloqueo", "correct": true},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Cuál es el orden correcto en la petición de un bloqueo? (T = Transacción; CC = Control de Concurrencia)",
+            "answers": [
+                {"text": "T pide bloqueo; CC concede bloqueo; T realiza operaciones", "correct": true},
+                {"text": "CC concede bloqueo; T pide bloqueo; T realiza operaciones", "correct": false},
+                {"text": "T pide bloqueo; T realiza operaciones; CC concede bloqueo", "correct": false},
+                {"text": "CC concede bloqueo; T realiza operaciones; T pide bloqueo", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Qué modos de bloqueo, solicitados por las transacciones T1 y T2, son compatibles entre si?",
+            "answers": [
+                {"text": "Compartido T1 y Compartido T2", "correct": true},
+                {"text": "Exclusivo T1 y Compartido T2", "correct": false},
+                {"text": "Compartido T1 y Exclusivo T2", "correct": false},
+                {"text": "Exclusivo T1 y Exclusivo T2", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Es posible generar estados inconsistentes utilizando protocolos de bloqueo?",
+            "answers": [
+                {"text": "Si, si los datos de desbloquean demasiado pronto", "correct": true},
+                {"text": "Si, siempre", "correct": false},
+                {"text": "Si, si se modifican los datos sin solicitar un bloqueo", "correct": false},
+                {"text": "No, nunca", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "Es verdad para el protocolo de bloqueo en dos fases",
+            "answers": [
+                {"text": "Asegura la secuencialidad en cuanto a conflictos", "correct": true},
+                {"text": "Tiene una fase compartida seguida de una fase exclusiva", "correct": false},
+                {"text": "Las transacciones deben liberar bloqueos antes de obtener otros nuevos", "correct": false},
+                {"text": "Inicialmente la transacción entra en fase de decrecimiento", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Que transacción es de dos fases?",
+            "answers": [
+                {"text": "T3", "correct": true},
+                {"text": "T1", "correct": false},
+                {"text": "T2", "correct": false},
+                {"text": "T4", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Qué es un interbloqueo?",
+            "answers": [
+                {"text": "Estado en el cual varias transacciones no pueden continuar su ejecución", "correct": true},
+                {"text": "", "correct": false},
+                {"text": "", "correct": false},
+                {"text": "", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "Los interbloqueos se pueden prevenir (no llegar a producirse) o detectar y recuperar (llegan y se resuelven)",
+            "answers": [
+                {"text": "Verdadero", "correct": true},
+                {"text": "Falso", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Qué es preferible, un interbloqueo o un estado inconsistente?",
+            "answers": [
+                {"text": "Interbloqueo", "correct": true},
+                {"text": "Estado inconsistente", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿En qué protocolo del gestor de concurrencia se mantiene una copia de la base para cada transacción?",
+            "answers": [
+                {"text": "En los de aislamiento de instantáneas", "correct": true},
+                {"text": "En los de bloqueos", "correct": false},
+                {"text": "En los de versiones múltiples", "correct": false},
+                {"text": "En los de marcas de tiempo", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "En esquema de control de concurrencia denominado aislamiento de instatáneas ...",
+            "answers": [
+                {"text": "... las transacciones vuelcan su espacio de datos antes de comprometerse", "correct": true},
+                {"text": "... las transacciones comparten copias locales de los datos", "correct": false},
+                {"text": "... las transacciones de actualización de datos nunca son abortadas", "correct": false},
+                {"text": "... las transacciones vuelcan su espacio de datos antes de comprometerse", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Cuáles son las principales virtudes del aislamiento de instantáneas?",
+            "answers": [
+                {"text": "Sobrecarga baja y sólo abortan transacciones que actualicen el mismo dato", "correct": true},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "Si dos transacciones entran en conflicto, la primera en obtener el bloqueo se compromete y realiza la actualización",
+            "answers": [
+                {"text": "Primera actualización gana", "correct": true},
+                {"text": "Primer compromiso gana", "correct": false},
+                {"text": "?????", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 3
+        },
+        {
+            "question": "¿Qué efecto hay que prevenir en el aislamiento de instantáneas?",
+            "answers": [
+                {"text": "Actualizaciones perdidas", "correct": true},
+                {"text": "Primer compromiso gana", "correct": false},
+                {"text": "Primera actualización gana", "correct": false},
+                {"text": "Fenómeno fantasma", "correct": true}
+            ],
+            "type": 3
+        },
+        {
             "question": "No es un paso del procesamiento de una consulta",
             "answers": [
                 {"text": "Evaluación", "correct": false},
@@ -434,7 +600,7 @@
             "type": 7
         },
         {
-            "question": "¿Que consulta representa el siguiente plan de ejecución (sólo operaciones)?",
+            "question": "¿Qué consulta representa el siguiente plan de ejecución (sólo operaciones)?",
             "answers": [
                 {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2; WHERE A1>0)", "correct": false},
                 {"text": "SELECT B2, B3; FROM R2, (SELECT A2, A2; FROM R1; WHERE A1>0)", "correct": false},
