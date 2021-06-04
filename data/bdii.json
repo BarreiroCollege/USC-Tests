@@ -1036,6 +1036,94 @@
             "type": 7
         },
         {
+            "question": "¿A qué tipo de sistema responde la figura?",
+            "answers": [
+                {"text": "Sistema Centralizado", "correct": true},
+                {"text": "Sistema Cliente-Servidor", "correct": false},
+                {"text": "Sistemas Procesador de Transacciones", "correct": false},
+                {"text": "Sistema Acceso a Datos", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "Los sistemas centralizados pueden ser multiusuario",
+            "answers": [
+                {"text": "Verdadero", "correct": true},
+                {"text": "Falso", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "¿Qué sistemas de base de datos carecen de control de concurrencia?",
+            "answers": [
+                {"text": "Centralizados monousuarios", "correct": true},
+                {"text": "Centralizados multiusuarios", "correct": false},
+                {"text": "Cliente-Servidor", "correct": false},
+                {"text": "Sistemas distribuidos", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "En los sistemas centralizados multiusuario el paralelismo se establece habitualmente a nivel de ...",
+            "answers": [
+                {"text": "Transacciones (1 transacción a cada procesador)", "correct": true},
+                {"text": "Instrucciones SQL (1 instrucción SQL a cada procesador)", "correct": false},
+                {"text": "Bloques de datos (1 bloque de datos a cada procesador)", "correct": false},
+                {"text": "Registros (1 tupla a cada procesador)", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "¿A qué tipo de sistema responde la figura?",
+            "answers": [
+                {"text": "Sistema Cliente-Servidor", "correct": true},
+                {"text": "Sistema Centralizado", "correct": false},
+                {"text": "Sistemas Procesador de Transacciones", "correct": false},
+                {"text": "Sistema Acceso a Datos", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "La conexión mediante normal ODBC (y cualquiera de sus versiones particulares) es propia de una arquitectura ...",
+            "answers": [
+                {"text": "Cliente-Servidor", "correct": true},
+                {"text": "Centralizada Monousuario", "correct": false},
+                {"text": "Desconectada", "correct": false},
+                {"text": "Multiusuario", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "¿Qué arquitectura se usa más ampliamente en los servidores?",
+            "answers": [
+                {"text": "Servidor de Transacciones", "correct": true},
+                {"text": "Servidores de Datos", "correct": false},
+                {"text": "Servidores de Bloques", "correct": false},
+                {"text": "Servidores de Registros", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "¿Qué mejora el paralelismo de consultas?",
+            "answers": [
+                {"text": "La velocidad de respuesta", "correct": true},
+                {"text": "El número de datos necesarios", "correct": false},
+                {"text": "La fiabilidad del sistema", "correct": false},
+                {"text": "Los modelos de datos", "correct": false}
+            ],
+            "type": 8
+        },
+        {
+            "question": "Cuando los diferentes sitios de una arquitectura emplean idéntico software de gestión se habla de ...",
+            "answers": [
+                {"text": "Bases de datos distribuidas homogéneas", "correct": true},
+                {"text": "Bases de datos distribuidas heterogéneas", "correct": false},
+                {"text": "Bases de datos paralelas homogéneas", "correct": false},
+                {"text": "Bases de datos paralelas heterogéneas", "correct": false}
+            ],
+            "type": 8
+        },
+        {
             "question": "Un sistema de bases de datos que, de forma nativa, admita un sistema de tipos orientados a objetos se denomina ...",
             "answers": [
                 {"text": "... Sistema de Bases de Datos Orientado a Objetos", "correct": true},
