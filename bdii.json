@@ -562,6 +562,192 @@
             "type": 3
         },
         {
+            "question": "¿Una transacción con un error lógico puede volver a ejecutarse sin modificaciones?",
+            "answers": [
+                {"text": "Si", "correct": true},
+                {"text": "No", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Qué es el supuesto fallo-parada?",
+            "answers": [
+                {"text": "Los errores hardware/software no corrompen la memoria no volátil", "correct": true},
+                {"text": "Los errores hardware/software no corrompen la memoria volátil", "correct": false},
+                {"text": "Un bloqueo de disco puede perder su contenido en un fallo de disco", "correct": false},
+                {"text": "Un error lógico de una transacción puede corromper la memoria no volátil", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Los algoritmos de recuperación realizan acciones durante el procesamiento normal de las transacciones?",
+            "answers": [
+                {"text": "Si, para que exista información suficiente para permitir la recuperación", "correct": true},
+                {"text": "Si, para anticipar errores lógicos que pudieran provocar un fallo", "correct": false},
+                {"text": "No, todo está disponible en la planificación de las transacciones", "correct": false},
+                {"text": "No, la información está almacenada en la propia transacción", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Qué tipo de almacenamiento en esencial en los algoritmos de recuperación?",
+            "answers": [
+                {"text": "Almacenamiento estable", "correct": true},
+                {"text": "Almacenamiento volátil", "correct": false},
+                {"text": "Almacenamiento no volátil", "correct": false},
+                {"text": "Almacenamiento portátil", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "La forma más básica de implementar almacenamiento estable es mediante ...",
+            "answers": [
+                {"text": "... sistemas RAID de disco con imagen", "correct": true},
+                {"text": "... bloques físicos en memoria intermedia", "correct": false},
+                {"text": "... sistemas de control de concurrencia sin fallos", "correct": false},
+                {"text": "... transacciones RAID comprometidas", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Los sistemas más seguros de almacenamiento estable ...",
+            "answers": [
+                {"text": "... guardan las copias duplicadas en espacios físicos diferentes", "correct": true},
+                {"text": "... realizan tres o más imágenes de disco", "correct": false},
+                {"text": "... combinan almacenamientos volátiles con almacenamientos no volátiles", "correct": false},
+                {"text": "... gestionan la información por bloques", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "En un sistema de disco con imagen (RAID) la salida de datos (1 bloque lógico a 2 bloques físicos) está completa ...",
+            "answers": [
+                {"text": "... cuando finaliza la segunda escritura", "correct": true},
+                {"text": "... cuando finaliza la primera escritura", "correct": false},
+                {"text": "... cuando finaliza la escritura del bloque físico 1", "correct": false},
+                {"text": "... cuando finaliza la escritura del bloque físico 2", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Las transacciones operan por medio de transferencias de datos entre ...",
+            "answers": [
+                {"text": "... su área privada de trabajo y la memoria intermeida volátil", "correct": true},
+                {"text": "... su área privada de trabajo y el disco de almacenamiento estable", "correct": false},
+                {"text": "... la memoria intermeida volátil y el disco de almacenamiento estable", "correct": false},
+                {"text": "... su área privada y el disco no volátil", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Para conseguir el objetivo de la atomicidad de una transacción ...",
+            "answers": [
+                {"text": "... se almacena la información sobre las moficiaciones antes de realizarlas", "correct": true},
+                {"text": "... se realizan las modificaciones antes de almacenar su información", "correct": false},
+                {"text": "... se realizan las modificaciones sobre memoria no volátil", "correct": false},
+                {"text": "... se realizan las modificaciones sobre memoria volátil", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Dónde debe residir el registro histórico de operaciones?",
+            "answers": [
+                {"text": "Almacenamiento estable", "correct": true},
+                {"text": "Almacenamiento volátil", "correct": false},
+                {"text": "Almacenamiento no volátil", "correct": false},
+                {"text": "Almacenamiento portátil", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "En el registro de actualizaciones de datos del registro histórico NO se almacena ...",
+            "answers": [
+                {"text": "... el estado de la transacción (iniciada, comprometida, abortada)", "correct": true},
+                {"text": "... el identificador de la transacción", "correct": false},
+                {"text": "... el valor anterior del dato", "correct": false},
+                {"text": "... el valro nuevo del dato", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Se dice que una transacción modifica la base de datos si realiza una actualización ...",
+            "answers": [
+                {"text": "... en la memoria intermedia volátil o en el disco no volátil", "correct": true},
+                {"text": "... exclusivamente en la memoria intermedia volátil", "correct": false},
+                {"text": "... exclusivamente en el disco no volátil", "correct": false},
+                {"text": "... exclusivamente en almacenamiento estable", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "El registro histórico permite implementar las siguientes operaciones",
+            "answers": [
+                {"text": "Deshacer (recuperar valor anterior) y Rehacer (especificar valor nuevo)", "correct": true},
+                {"text": "Leer (recuperar valor anterior) y Escribir (especificar valro nuevo)", "correct": false},
+                {"text": "Entrada (recuperar valor anterior) y Salida (especificar valro nuevo)", "correct": false},
+                {"text": "Borrar (recuperar valor anterior) e Insertar (especificar valro nuevo)", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Se dice que una transacción es comprometida cuando ...",
+            "answers": [
+                {"text": "... todo su registro histórico se ha guardado en almacenamiento estable", "correct": true},
+                {"text": "... realiza la última actualización de la base de datos", "correct": false},
+                {"text": "... realiza su última operación de escritura", "correct": false},
+                {"text": "... todo su registro histórico se ha guardado", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "Los puntos de revisión permiten ...",
+            "answers": [
+                {"text": "... reducir la carga que supondría la lectura completa del registro histórico", "correct": true},
+                {"text": "... ralentizar el procesado de transacciones", "correct": false},
+                {"text": "... asegurar el volcado de la memoria intermedia en el disco", "correct": false},
+                {"text": "... evitar un fallo en memoria estable", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "NO está permitido durante la operación de establecimiento de un punto de revisión",
+            "answers": [
+                {"text": "Actualización de base de datos o de registro histórico por transacciones", "correct": true},
+                {"text": "Escritura en almacenamiento estable del registro histórico", "correct": false},
+                {"text": "Escritura en disco de los bloques modificados en memoria intermedia", "correct": false},
+                {"text": "Actualizaciónd el registro histórico con la lista de transacciones activas", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Es lo mismo almacenamiento estable que almacenamiento no volátil?",
+            "answers": [
+                {"text": "No", "correct": true},
+                {"text": "Si", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Qué tarea NO se realiza durante un volcado de una base de datos?",
+            "answers": [
+                {"text": "Tener el mayor número posible de transacciones activas", "correct": true},
+                {"text": "Escribir en almacenamiento estbale el registro histórico", "correct": false},
+                {"text": "Escribir en disco no volátil los bloques de la memoria intermeida volátil", "correct": false},
+                {"text": "Copiar el contenido de la base de datos en almacenamiento estable", "correct": false}
+            ],
+            "type": 4
+        },
+        {
+            "question": "¿Con qué temporalidad se debería establecer un punto de revisión en el RH y/o realizar un volcado de la BD?",
+            "answers": [
+                {"text": "Depende", "correct": true},
+                {"text": "Cada hora", "correct": false},
+                {"text": "Cada día", "correct": false},
+                {"text": "Cada semana", "correct": false}
+            ],
+            "type": 4
+        },
+        {
             "question": "No es un paso del procesamiento de una consulta",
             "answers": [
                 {"text": "Evaluación", "correct": false},
@@ -592,6 +778,16 @@
             "type": 7
         },
         {
+            "question": "Si se pudiera elegir libremente, ¿qué enfoque de conexión de primitivas de evaluación sería preferible?",
+            "answers": [
+                {"text": "Reunión Natural", "correct": false},
+                {"text": "Encauzamiento", "correct": false},
+                {"text": "Agregación", "correct": false},
+                {"text": "Materialización", "correct": true}
+            ],
+            "type": 7
+        },
+        {
             "question": "El coste de una evaluación materializada es igual a la suma de los costes de las operaciones involucradas",
             "answers": [
                 {"text": "Verdadero", "correct": false},
@@ -600,17 +796,7 @@
             "type": 7
         },
         {
-            "question": "¿Qué consulta representa el siguiente plan de ejecución (sólo operaciones)?",
-            "answers": [
-                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2; WHERE A1>0)", "correct": false},
-                {"text": "SELECT B2, B3; FROM R2, (SELECT A2, A2; FROM R1; WHERE A1>0)", "correct": false},
-                {"text": "SELECT B2, B3; FROM R2, (SELECT A1, A2; FROM R1; WHERE A1>0)", "correct": false},
-                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2); WHERE A1>0", "correct": true}
-            ],
-            "type": 7
-        },
-        {
-            "question": "Todas las conexiones de primitvas de evaluación se pueden realizar mediante encauzamiento",
+            "question": "Todas las conexiones de primitivas de evaluación se pueden realizar mediante encauzamiento",
             "answers": [
                 {"text": "Verdadero", "correct": false},
                 {"text": "Falso", "correct": true}
@@ -628,22 +814,20 @@
             "type": 7
         },
         {
-            "question": "?????",
+            "question": "¿Qué consulta representa el siguiente plan de ejecución (sólo operaciones)?",
             "answers": [
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false}
+                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2; WHERE A1>0)", "correct": false},
+                {"text": "SELECT B2, B3; FROM R2, (SELECT A2, A2; FROM R1; WHERE A1>0)", "correct": false},
+                {"text": "SELECT B2, B3; FROM R2, (SELECT A1, A2; FROM R1; WHERE A1>0)", "correct": false},
+                {"text": "SELECT A1, A2; FROM R1, (SELECT B2, B3; FROM R2); WHERE A1>0", "correct": true}
             ],
             "type": 7
         },
         {
-            "question": "?????",
+            "question": "El optimizador de consultas encuentra siempre el plan de ejecución menos costoso",
             "answers": [
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false},
-                {"text": "?????", "correct": false}
+                {"text": "Falso", "correct": true},
+                {"text": "Verdadero", "correct": false}
             ],
             "type": 7
         },
