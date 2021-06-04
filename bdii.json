@@ -748,6 +748,166 @@
             "type": 4
         },
         {
+            "question": "No es un criterio de clasificación de medios de almacenamiento",
+            "answers": [
+                {"text": "Marca y modelo", "correct": true},
+                {"text": "Velocidad de acceso a los datos", "correct": false},
+                {"text": "Coste de adquisición por unidad de dato", "correct": false},
+                {"text": "Fiabilidad", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "El medio de almacenamiento utilizada por las bases de datos para operar con datos es ...",
+            "answers": [
+                {"text": "... la memoria principal", "correct": true},
+                {"text": "... la memoria flash", "correct": false},
+                {"text": "... el almacenamiento en cintas", "correct": false},
+                {"text": "... el jukebox", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Las memorias flash se consideran ...",
+            "answers": [
+                {"text": "... almacenamiento secundario", "correct": true},
+                {"text": "... almacenamiento primario", "correct": false},
+                {"text": "... almacenamiento terciario", "correct": false},
+                {"text": "... almacenamiento cuaternario", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "¿Qué medios físicos de almacenamiento se usan para implementar el almacenamiento estable de bases de datos?",
+            "answers": [
+                {"text": "Discos magnéticos", "correct": true},
+                {"text": "Memorias Flash", "correct": true},
+                {"text": "Caché", "correct": false},
+                {"text": "Memoria principal", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Afirmación falsa sobre los motivos de uso de los sitemas RAID hoy en día",
+            "answers": [
+                {"text": "Se usan por motivos económicos (la I de RAID significa inexpensive)", "correct": true},
+                {"text": "Se usan por su mayor fiabilidad (aumenta el tiempo medio entre fallos)", "correct": false},
+                {"text": "Se usan por su mejor rendimiento", "correct": false},
+                {"text": "Se usan por su mayor facilidad de almacenamiento", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "¿Qué niveld e RAID necesita más discos para almacenar la misma información bajo el supuesto de almacenamiento estable?",
+            "answers": [
+                {"text": "RAID 1: discos con imagen", "correct": true},
+                {"text": "RAID 0: distribución no redundante", "correct": false},
+                {"text": "RAID 2: códigos de corrección de errores", "correct": false},
+                {"text": "RAID 5: paridad distribuida", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Nivel RAID habitual en aplicaciones con requisitos moderados de almacenamiento y grandes de entrada/salida",
+            "answers": [
+                {"text": "RAID 1", "correct": true},
+                {"text": "RAID 2", "correct": false},
+                {"text": "RAID 5", "correct": false},
+                {"text": "RAID 6", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Afirmación incorrecta sobre la organización de archivos",
+            "answers": [
+                {"text": "Un bloque contiene exactamente un registro de la base de datos", "correct": true},
+                {"text": "Los archivos de la base de datos se organizan como secuencias de registros", "correct": false},
+                {"text": "Los archivos de la base de datos se dividen en bloques", "correct": false},
+                {"text": "Ningún registor de la base de datos es mayor que un bloque", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "¿Qué información no se guarda en el catálogo del sistema?",
+            "answers": [
+                {"text": "Las tuplas de las relaciones", "correct": true},
+                {"text": "El nombre de los atributos de cada relación", "correct": false},
+                {"text": "Las restricciones de integridad", "correct": false},
+                {"text": "El nombre y definición de las vistas", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Criterio a valorar para la selección de la técnica de indexación a emplear",
+            "answers": [
+                {"text": "Tiempo de inserción", "correct": true},
+                {"text": "Tipos de borrado", "correct": false},
+                {"text": "Disminución del espacio sin índice", "correct": false},
+                {"text": "Asociación ordenada", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Los atributos o conjuntos de atributos usados para buscar en un archivo se llaman ...",
+            "answers": [
+                {"text": "Clave de búsqueda", "correct": true},
+                {"text": "Clave primaria", "correct": false},
+                {"text": "Clave candidata", "correct": false},
+                {"text": "Superclave", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "El índice ordenado cuya clave de búsqueda especifica el orden secuencial del archivo que contiene los registros asociados",
+            "answers": [
+                {"text": "Índice con agrupación o índice primario", "correct": true},
+                {"text": "Índice sin agrupación o índice secundario", "correct": false},
+                {"text": "Índice con montígulos o índice indexado primario", "correct": false},
+                {"text": "Índice sin montígulos o índice indexado secundario", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "¿Qué estructura de índice es la más extendida entre las que mantiene su eficacia ante inserción y borrado?",
+            "answers": [
+                {"text": "Árbol B+", "correct": true},
+                {"text": "Grafo GR", "correct": false},
+                {"text": "Registro Z1", "correct": false},
+                {"text": "Conjunto R plus", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "En los índices por asociación, ¿cuándo se utiliza la función de asociación h(Ki)? [Ki=valores de la clave de búsqueda]",
+            "answers": [
+                {"text": "Para insertar, eliminar y buscar registros en los cajones de datos", "correct": true},
+                {"text": "Para insertar y buscar registros en los cajones de datos", "correct": false},
+                {"text": "Para buscar registros en los cajones de datos", "correct": false},
+                {"text": "Para insertar y eliminar registros en los cajones de datos", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Si la mayoría de consultas son de la forma mostrada en la figura, ¿qué esquema de índice es mejor usar? \"SELECT A1,A2,...,An FROM r WHERE Ai=c;\"",
+            "answers": [
+                {"text": "Índice asociativo", "correct": true},
+                {"text": "Índice ordenado", "correct": false},
+                {"text": "Índice de clave primaria", "correct": false},
+                {"text": "Índice de clave externa", "correct": false}
+            ],
+            "type": 6
+        },
+        {
+            "question": "Si la mayoría de consultas son de la forma mostrada en la figura, ¿qué esquema de índice es mejor usar? \"SELECT A1,A2,...,An FROM r WHERE Ai<=c AND Ai>=c;\"",
+            "answers": [
+                {"text": "Índice ordenado", "correct": true},
+                {"text": "Índice asociativo", "correct": false},
+                {"text": "Índice de clave primaria", "correct": false},
+                {"text": "Índice de clave externa", "correct": false}
+            ],
+            "type": 6
+        },
+        {
             "question": "No es un paso del procesamiento de una consulta",
             "answers": [
                 {"text": "Evaluación", "correct": false},
