@@ -941,9 +941,9 @@
             "question": "Si se pudiera elegir libremente, ¿qué enfoque de conexión de primitivas de evaluación sería preferible?",
             "answers": [
                 {"text": "Reunión Natural", "correct": false},
-                {"text": "Encauzamiento", "correct": false},
+                {"text": "Encauzamiento", "correct": true},
                 {"text": "Agregación", "correct": false},
-                {"text": "Materialización", "correct": true}
+                {"text": "Materialización", "correct": false}
             ],
             "type": 7
         },
