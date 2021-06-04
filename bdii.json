@@ -1034,6 +1034,104 @@
                 {"text": "Adelantando todo lo posible las operaciones de reunión", "correct": false}
             ],
             "type": 7
+        },
+        {
+            "question": "Un sistema de bases de datos que, de forma nativa, admita un sistema de tipos orientados a objetos se denomina ...",
+            "answers": [
+                {"text": "... Sistema de Bases de Datos Orientado a Objetos", "correct": true},
+                {"text": "... Sistema de Bases de Datos Relacionales", "correct": false},
+                {"text": "... Sistema de Bases de Datos Jerárquicos", "correct": false},
+                {"text": "... Sistema de Bases de Datos Documentales", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "Los atributos compuestos de Modelos Entidad-Relación se representan en SGBD orientados a objetos mediante ...",
+            "answers": [
+                {"text": "... tipos estructurados", "correct": true},
+                {"text": "... tipos simples", "correct": false},
+                {"text": "... tipos multivalorados", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "¿Qué elemento de los Modelos Entidad-Relación permite desarrollar la herencia de tipos?",
+            "answers": [
+                {"text": "Jerarquías", "correct": true},
+                {"text": "Entidades", "correct": false},
+                {"text": "Atributos", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "¿Qué elemento de los Modelos Entidad-Relación permite desarrollar los arrays y los multiconjuntos?",
+            "answers": [
+                {"text": "Atributos multivalorados", "correct": true},
+                {"text": "Atributos simples", "correct": false},
+                {"text": "Atributos complejos", "correct": false},
+                {"text": "?????", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "¿Cuál de los siguientes sistemas es el más utilizado?",
+            "answers": [
+                {"text": "Sistemas de correspondencia entre modelos relacionales y orientado a objetos", "correct": true},
+                {"text": "Sistemas relacionales jerárquicos en red", "correct": false},
+                {"text": "Sistemas relacionales orientados a objetos", "correct": false},
+                {"text": "Bases de datos orientados a objetos", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "Los sistemas de ayuda a la toma de decisiones son equivalentes a los sistemas de procesamiento de transacciones",
+            "answers": [
+                {"text": "Falso", "correct": true},
+                {"text": "Verdadero", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "El almacenamiento y la recuperación de datos para toma de decisiones plantea problemas, ¿cuáles?",
+            "answers": [
+                {"text": "Descubrir patrones de conocimiento ocultos es sencillo", "correct": false},
+                {"text": "Hay necesidades de información que no pueden expresarse en SQL", "correct": true},
+                {"text": "Los lenguajes de consulta no son eficaces para el análisis estadístico", "correct": true},
+                {"text": "Las fuentes de información suelen tener esquemas de datos heterogéneos", "correct": true}
+            ],
+            "type": 9
+        },
+        {
+            "question": "¿Cuántos orígenes tiene la información almacenada en un almacén de datos?",
+            "answers": [
+                {"text": "Varios", "correct": true},
+                {"text": "1", "correct": false},
+                {"text": "Exactamente 2", "correct": false},
+                {"text": "Hasta 5", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "¿Qué técnicas utiliza la minería de datos para descubrir patrones ocultos?",
+            "answers": [
+                {"text": "Inteligencia artificial", "correct": true},
+                {"text": "Análisis estadístico", "correct": false},
+                {"text": "Álgebra relacional", "correct": false},
+                {"text": "Lógica computacional", "correct": false}
+            ],
+            "type": 9
+        },
+        {
+            "question": "Manejan información estructurada",
+            "answers": [
+                {"text": "Sistemas de Bases de Datos", "correct": true},
+                {"text": "Sistemas de Recuperación de Información Textual", "correct": false},
+                {"text": "Sistemas de Recuperación de Imágenes", "correct": false},
+                {"text": "Sistemas de Recuperación de Vídeos", "correct": false}
+            ],
+            "type": 9
         }
     ]
 }
